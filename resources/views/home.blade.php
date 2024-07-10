@@ -12,15 +12,14 @@
                 <div class="about-desc">
                     <div class="about-video">
                         <video class="about-video" id="aboutVideo">
-                            <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2.mp4" type="video/mp4">
-                            <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2.mp4" type="video/mp4">
-
+                            <source src="{{ asset("arifsolar/images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2.mp4")}}" type="video/mp4">
                         </video>
                         <button class="about-video-btn" id="aboutVideoBtn">
-                            <img src="./images/play.svg" alt="play" width="100" height="100">
+                            <img src="{{ asset("arifsolar/images/play.svg")}}" alt="play" width="100" height="100">
                         </button>
                     </div>
-                    <p class="about-box-desc"><span class="about-box-desc-span">Arif Solar, Arif International Holdingning energetika yo'nalishidagi sho' ba korxonasi xisoblanadi.</span>
+                    <p class="about-box-desc">
+                        <span class="about-box-desc-span">Arif Solar, Arif International Holdingning energetika yo'nalishidagi sho' ba korxonasi xisoblanadi.</span>
                         <br> Korxonamizning quyosh elektr stansiyalarini qurishuchun dunyoning eng sifatli barcha hom ashyo
                         va mahsulotlarni olib kelish va o'rnatish bilan shug'ullanadi.
                         Asosiy magsadlarimizdan biri O'zbekistonda gaytatiklanuvchi elektr energiya manbaylarini
@@ -46,24 +45,13 @@
                         <p class="work-item-desc">Quyosh panellari yetkazilgan</p>
                     </li>
                     <li class="work-item">
-                        <h4 class="work-item-title">2500 m²</h4>
-                        <p class="work-item-desc">Umumiy ombor maydoni</p>
-                    </li>
-                    <li class="work-item">
                         <h4 class="work-item-title">20 MW</h4>
                         <p class="work-item-desc">Quyosh panellari yetkazilgan</p>
-                    </li>
-                    <li class="work-item">
-                        <h4 class="work-item-title">50 %</h4>
-                        <p class="work-item-desc">Oylik tavsiya orqali sotuv</p>
-                    </li>
-                    <li class="work-item">
-                        <h4 class="work-item-title">2500 m²</h4>
-                        <p class="work-item-desc">Umumiy ombor maydoni</p>
                     </li>
                 </ul>
             </div>
         </section>
+
         <section class="our-jobs">
             <div class="container">
                 <div
@@ -75,26 +63,26 @@
                 </div>
                 <ul class="our-jobs-list">
                     <li class="our-jobs-item" id="ourJobsItem1">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
+                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}" alt="icon" width="111"
                              height="85">
                         <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                         <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
                     </li>
                     <li class="our-jobs-item" id="ourJobsItem2">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
+                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}" alt="icon" width="111"
                              height="85">
                         <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                         <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
                     </li>
                     <li class="our-jobs-item" id="ourJobsItem3">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
+                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}" alt="icon" width="111"
                              height="85">
                         <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                         <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
                     </li>
                     <li id="jobsItem">
                         <div class="our-jobs-item our-jobs-item-box" id="ourJobsItem4">
-                            <img style=" margin-bottom: 4px;" src="./images/murad-building-icon.svg" alt="icon" width="88"
+                            <img style=" margin-bottom: 4px;" src="{{ asset("arifsolar/images/murad-building-icon.svg")}}" alt="icon" width="88"
                                  height="74">
                             <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                             <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
@@ -102,25 +90,25 @@
                         <button class="our-jobs-item-btn">Ещё</button>
                     </li>
                     <li class="our-jobs-item" id="ourJobsItem5">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
+                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}" alt="icon" width="111"
                              height="85">
                         <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                         <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
                     </li>
                     <li class="our-jobs-item" id="ourJobsItem6">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
+                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}" alt="icon" width="111"
                              height="85">
                         <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                         <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
                     </li>
                     <li class="our-jobs-item" id="ourJobsItem7">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
+                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}" alt="icon" width="111"
                              height="85">
                         <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                         <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
                     </li>
                     <li class="our-jobs-item" id="ourJobsItem8">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
+                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}" alt="icon" width="111"
                              height="85">
                         <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
                         <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
@@ -140,17 +128,14 @@
                         <div class="arrow" id="next"><i class="fa-solid fa-chevron-right"></i></div>
                     </div>
                 </div>
+
                 <section>
                     <div id="cCarousel">
-
                         <div id="carousel-vp">
                             <div id="cCarousel-inner">
-
                                 <article class="cCarousel-item">
-
                                     <video style="object-fit: cover;" id="aboutCustomerVideo1">
-                                        <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4"
-                                                type="video/mp4">
+                                        <source src="{{ asset("arifsolar/images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4")}}" type="video/mp4">
                                     </video>
                                     <button class="about-customr-video-play" id="aboutCustomerVideoBtn1">
                                         <svg class="about-customr-video-play-img" width="72" height="72" viewBox="0 0 72 72"
@@ -164,13 +149,12 @@
                                         </svg>
                                     </button>
                                     <h4 class="about-customer-video-title">Aziza Usmonova</h4>
-
                                 </article>
 
                                 <article class="cCarousel-item">
 
                                     <video style="object-fit: cover;" id="aboutCustomerVideo2">
-                                        <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4"
+                                        <source src="{{ asset("arifsolar/images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4")}}"
                                                 type="video/mp4">
                                     </video>
                                     <button class="about-customr-video-play" id="aboutCustomerVideoBtn2">
@@ -191,7 +175,7 @@
                                 <article class="cCarousel-item">
 
                                     <video style="object-fit: cover;" id="aboutCustomerVideo3">
-                                        <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4"
+                                        <source src="{{ asset("arifsolar/images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4")}}"
                                                 type="video/mp4">
                                     </video>
                                     <button class="about-customr-video-play" id="aboutCustomerVideoBtn3">
@@ -212,7 +196,7 @@
                                 <article class="cCarousel-item">
 
                                     <video style="object-fit: cover;" id="aboutCustomerVideo4">
-                                        <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4"
+                                        <source src="{{ asset("arifsolar/images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4")}}"
                                                 type="video/mp4">
                                     </video>
                                     <button class="about-customr-video-play" id="aboutCustomerVideoBtn4">
@@ -233,7 +217,7 @@
                                 <article class="cCarousel-item">
 
                                     <video style="object-fit: cover;" id="aboutCustomerVideo5">
-                                        <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4"
+                                        <source src="{{ asset("arifsolar/images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4")}}"
                                                 type="video/mp4">
                                     </video>
                                     <button class="about-customr-video-play" id="aboutCustomerVideoBtn5">
@@ -254,7 +238,7 @@
                                 <article class="cCarousel-item">
 
                                     <video style="object-fit: cover;" id="aboutCustomerVideo6">
-                                        <source src="./images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4"
+                                        <source src="{{ asset("arifsolar/images/Muhammadiy 2_b1db73e3-bd0a-4fad-8428-af6d486041f2 (1).mp4")}}"
                                                 type="video/mp4">
                                     </video>
                                     <button class="about-customr-video-play" id="aboutCustomerVideoBtn6">
@@ -277,6 +261,7 @@
                 </section>
             </div>
         </section>
+
         <section class="customer-opinion about-customer">
             <div class="container">
                 <div style="display: flex; align-items: center; justify-content: space-between;  margin-bottom: 48px;">
@@ -306,7 +291,7 @@
                                     <span class="customer-opinion-item-line"></span>
                                     <div class="customer-opinion-item-box"
                                          style="display: flex; align-items: center; gap: 8px; margin-top: 23px;">
-                                        <img src="./images/vector-person.svg" alt="vector">
+                                        <img src="{{ asset("arifsolar/images/vector-person.svg")}}" alt="vector">
                                         <h5 class="customer-opinion-box-title">Asliddin Sharipov <br> <span style="margin: 0;
                             padding: 0; font-size: 10px; line-height: 14px; color: #00A0A8;">Tech Soft Direktori</span>
                                         </h5>
@@ -325,7 +310,7 @@
                                     <span class="customer-opinion-item-line"></span>
                                     <div class="customer-opinion-item-box"
                                          style="display: flex; align-items: center; gap: 8px; margin-top: 23px;">
-                                        <img src="./images/vector-person.svg" alt="vector">
+                                        <img src="{{ asset("arifsolar/images/vector-person.svg")}}" alt="vector">
                                         <h5 class="customer-opinion-box-title">Asliddin Sharipov <br> <span style="margin: 0;
                              padding: 0; font-size: 10px; line-height: 14px; color: #00A0A8;">Tech Soft Direktori</span>
                                         </h5>
@@ -344,7 +329,7 @@
                                     <span class="customer-opinion-item-line"></span>
                                     <div class="customer-opinion-item-box"
                                          style="display: flex; align-items: center; gap: 8px; margin-top: 23px;">
-                                        <img src="./images/vector-person.svg" alt="vector">
+                                        <img src="{{ asset("arifsolar/images/vector-person.svg")}}" alt="vector">
                                         <h5 class="customer-opinion-box-title">Asliddin Sharipov <br> <span style="margin: 0;
                              padding: 0; font-size: 10px; line-height: 14px; color: #00A0A8;">Tech Soft Direktori</span>
                                         </h5>
@@ -363,7 +348,7 @@
                                     <span class="customer-opinion-item-line"></span>
                                     <div class="customer-opinion-item-box"
                                          style="display: flex; align-items: center; gap: 8px; margin-top: 23px;">
-                                        <img src="./images/vector-person.svg" alt="vector">
+                                        <img src="{{ asset("arifsolar/images/vector-person.svg")}}" alt="vector">
                                         <h5 class="customer-opinion-box-title">Asliddin Sharipov <br> <span style="margin: 0;
                              padding: 0; font-size: 10px; line-height: 14px; color: #00A0A8;">Tech Soft Direktori</span>
                                         </h5>
@@ -382,7 +367,7 @@
                                     <span class="customer-opinion-item-line"></span>
                                     <div class="customer-opinion-item-box"
                                          style="display: flex; align-items: center; gap: 8px; margin-top: 23px;">
-                                        <img src="./images/vector-person.svg" alt="vector">
+                                        <img src="{{ asset("arifsolar/images/vector-person.svg")}}" alt="vector">
                                         <h5 class="customer-opinion-box-title">Asliddin Sharipov <br> <span style="margin: 0;
                              padding: 0; font-size: 10px; line-height: 14px; color: #00A0A8;">Tech Soft Direktori</span>
                                         </h5>
@@ -401,7 +386,7 @@
                                     <span class="customer-opinion-item-line"></span>
                                     <div class="customer-opinion-item-box"
                                          style="display: flex; align-items: center; gap: 8px; margin-top: 23px;">
-                                        <img src="./images/vector-person.svg" alt="vector">
+                                        <img src="{{ asset("arifsolar/images/vector-person.svg")}}" alt="vector">
                                         <h5 class="customer-opinion-box-title">Asliddin Sharipov <br> <span style="margin: 0;
                              padding: 0; font-size: 10px; line-height: 14px; color: #00A0A8;">Tech Soft Direktori</span>
                                         </h5>
@@ -415,6 +400,7 @@
                 </section>
             </div>
         </section>
+
         <section class="news about-customer">
             <div class="container">
                 <div style="display: flex; align-items: center; justify-content: space-between;  margin-bottom: 48px;">
@@ -435,7 +421,7 @@
 
                                 <article class="cCarousel-item3">
 
-                                    <img class="news-item-img" src="./images/new-item-img.png" alt="img" width="386"
+                                    <img class="news-item-img" src="{{ asset("arifsolar/images/new-item-img.png")}}" alt="img" width="386"
                                          height="220" style="margin-bottom: 28px;">
                                     <h4 class="news-item-title">Quyosh panellari haqida 3ta fakt</h4>
                                     <p class="news-item-desc">☀️ Quyoshli o‘lkamiz uchun mos keladigan quyosh batareyalari
@@ -451,7 +437,7 @@
 
                                 <article class="cCarousel-item3">
 
-                                    <img class="news-item-img" src="./images/news-countrys-img.png" alt="img" width="386"
+                                    <img class="news-item-img" src="{{ asset("arifsolar/images/news-countrys-img.png")}}" alt="img" width="386"
                                          height="220" style="margin-bottom: 28px;">
                                     <h4 class="news-item-title">Quyosh energiyasidan foydalanadigan davlatlar TOP 3..</h4>
                                     <p class="news-item-desc">⚡️ Аҳоли кўпайгани сари электр истеъмоли ҳам кўпаяди...</p>
@@ -466,7 +452,7 @@
 
                                 <article class="cCarousel-item3">
 
-                                    <img class="news-item-img" src="./images/news-third-item.png" alt="img" width="386"
+                                    <img class="news-item-img" src="{{ asset("arifsolar/images/news-third-item.png")}}" alt="img" width="386"
                                          height="220" style="margin-bottom: 28px;">
                                     <h4 class="news-item-title">Yuqori sifat va uzoq muddatni..</h4>
                                     <p class="news-item-desc">🌞 Biz o‘z quyosh panellarimizga 25 yil kafolat beramiz
@@ -485,7 +471,7 @@
 
                                 <article class="cCarousel-item3">
 
-                                    <img class="news-item-img" src="./images/new-item-img.png" alt="img" width="386"
+                                    <img class="news-item-img" src="{{ asset("arifsolar/images/new-item-img.png")}}" alt="img" width="386"
                                          height="220" style="margin-bottom: 28px;">
                                     <h4 class="news-item-title">Quyosh panellari haqida 3ta fakt</h4>
                                     <p class="news-item-desc">☀️ Quyoshli o‘lkamiz uchun mos keladigan quyosh batareyalari
@@ -501,7 +487,7 @@
 
                                 <article class="cCarousel-item3">
 
-                                    <img class="news-item-img" src="./images/news-countrys-img.png" alt="img" width="386"
+                                    <img class="news-item-img" src="{{ asset("arifsolar/images/news-countrys-img.png")}}" alt="img" width="386"
                                          height="220" style="margin-bottom: 28px;">
                                     <h4 class="news-item-title">Quyosh energiyasidan foydalanadigan davlatlar TOP 3..</h4>
                                     <p class="news-item-desc">⚡️ Аҳоли кўпайгани сари электр истеъмоли ҳам кўпаяди...</p>
@@ -516,7 +502,7 @@
 
                                 <article class="cCarousel-item3">
 
-                                    <img class="news-item-img" src="./images/news-third-item.png" alt="img" width="386"
+                                    <img class="news-item-img" src="{{ asset("arifsolar/images/news-third-item.png")}}" alt="img" width="386"
                                          height="220" style="margin-bottom: 28px;">
                                     <h4 class="news-item-title">Yuqori sifat va uzoq muddatni..</h4>
                                     <p class="news-item-desc">🌞 Biz o‘z quyosh panellarimizga 25 yil kafolat beramiz
@@ -538,6 +524,7 @@
                 </section>
             </div>
         </section>
+
         <section class="free-tial-section about-customer">
             <div class="container">
                 <div style="  margin-bottom: 64px;">
@@ -619,28 +606,22 @@
                 <div class="slider">
                     <div class="slide-track">
                         <div class="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
-                                 alt=""/>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt=""/>
                         </div>
                         <div class="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
-                                 alt=""/>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt=""/>
                         </div>
                         <div class="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
-                                 alt=""/>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt=""/>
                         </div>
                         <div class="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
-                                 alt=""/>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt=""/>
                         </div>
                         <div class="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
-                                 alt=""/>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt=""/>
                         </div>
                         <div class="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
-                                 alt=""/>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt=""/>
                         </div>
                         <div class="slide">
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
@@ -694,28 +675,28 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <ul class="address-list">
                         <li class="address-item">
-                            <img src="./images/phone-icon.svg" alt="phone" width="64" height="64">
+                            <img src="{{ asset("arifsolar/images/phone-icon.svg")}}" alt="phone" width="64" height="64">
                             <p class="address-item-desc">
                                 Telefon raqam: <br>
                                 <span>+998 (99) 563 52 35</span>
                             </p>
                         </li>
                         <li class="address-item">
-                            <img src="./images/location-icon.svg" alt="phone" width="64" height="64">
+                            <img src="{{ asset("arifsolar/images/location-icon.svg")}}" alt="phone" width="64" height="64">
                             <p class="address-item-desc">
                                 Manzil: <br>
                                 <span>Islom, Karimov 55-A uy, Qarshi</span>
                             </p>
                         </li>
                         <li class="address-item">
-                            <img src="./images/mail-icon.svg" alt="mail" width="64" height="64">
+                            <img src="{{ asset("arifsolar/images/mail-icon.svg")}}" alt="mail" width="64" height="64">
                             <p class="address-item-desc">
                                 Pochta: <br>
                                 <span>arial.uz@gmail.com</span>
                             </p>
                         </li>
                         <li class="address-item">
-                            <img src="./images/clock-icon.svg" alt="clock" width="64" height="64">
+                            <img src="{{ asset("arifsolar/images/clock-icon.svg")}}" alt="clock" width="64" height="64">
                             <p class="address-item-desc">
                                 Ish vaqti:<br>
                                 <span>Dushanba-Juma 8:00 dan 18:00 gacha</span>

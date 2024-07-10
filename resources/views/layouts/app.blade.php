@@ -24,9 +24,7 @@
         <button class="header-top-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <rect width="32" height="32" rx="16" fill="white" fill-opacity="0.4"/>
-                <path
-                    d="M21.8242 20.9752C21.8799 21.031 21.9241 21.0971 21.9543 21.17C21.9845 21.2428 22 21.3209 22 21.3997C22 21.4785 21.9845 21.5566 21.9543 21.6294C21.9241 21.7023 21.8799 21.7684 21.8242 21.8242C21.7684 21.8799 21.7023 21.9241 21.6294 21.9543C21.5566 21.9845 21.4785 22 21.3997 22C21.3209 22 21.2428 21.9845 21.17 21.9543C21.0971 21.9241 21.031 21.8799 20.9752 21.8242L16 16.8482L11.0248 21.8242C10.9122 21.9368 10.7595 22 10.6003 22C10.4411 22 10.2884 21.9368 10.1758 21.8242C10.0632 21.7116 10 21.5589 10 21.3997C10 21.2405 10.0632 21.0878 10.1758 20.9752L15.1518 16L10.1758 11.0248C10.0632 10.9122 10 10.7595 10 10.6003C10 10.4411 10.0632 10.2884 10.1758 10.1758C10.2884 10.0632 10.4411 10 10.6003 10C10.7595 10 10.9122 10.0632 11.0248 10.1758L16 15.1518L20.9752 10.1758C21.0878 10.0632 21.2405 10 21.3997 10C21.5589 10 21.7116 10.0632 21.8242 10.1758C21.9368 10.2884 22 10.4411 22 10.6003C22 10.7595 21.9368 10.9122 21.8242 11.0248L16.8482 16L21.8242 20.9752Z"
-                    fill="white"/>
+                <path d="M21.8242 20.9752C21.8799 21.031 21.9241 21.0971 21.9543 21.17C21.9845 21.2428 22 21.3209 22 21.3997C22 21.4785 21.9845 21.5566 21.9543 21.6294C21.9241 21.7023 21.8799 21.7684 21.8242 21.8242C21.7684 21.8799 21.7023 21.9241 21.6294 21.9543C21.5566 21.9845 21.4785 22 21.3997 22C21.3209 22 21.2428 21.9845 21.17 21.9543C21.0971 21.9241 21.031 21.8799 20.9752 21.8242L16 16.8482L11.0248 21.8242C10.9122 21.9368 10.7595 22 10.6003 22C10.4411 22 10.2884 21.9368 10.1758 21.8242C10.0632 21.7116 10 21.5589 10 21.3997C10 21.2405 10.0632 21.0878 10.1758 20.9752L15.1518 16L10.1758 11.0248C10.0632 10.9122 10 10.7595 10 10.6003C10 10.4411 10.0632 10.2884 10.1758 10.1758C10.2884 10.0632 10.4411 10 10.6003 10C10.7595 10 10.9122 10.0632 11.0248 10.1758L16 15.1518L20.9752 10.1758C21.0878 10.0632 21.2405 10 21.3997 10C21.5589 10 21.7116 10.0632 21.8242 10.1758C21.9368 10.2884 22 10.4411 22 10.6003C22 10.7595 21.9368 10.9122 21.8242 11.0248L16.8482 16L21.8242 20.9752Z" fill="white"/>
             </svg>
         </button>
     </div>
@@ -35,7 +33,7 @@
     <header>
         <div class="container header-container">
             <div class="header-left-box">
-                <img src="./images/Logo-1.svg" alt="logo" width="305" height="58">
+                <img src="{{ asset("arifsolar/images/Logo-1.svg")}}" alt="logo" width="305" height="58">
                 <span class="header-left-line"></span>
                 <h3 class="header-left-title">Установка солнечных <br>
                     станций под ключ в Узбекистане</h3>
@@ -43,16 +41,16 @@
             </div>
             <div class="header-rigt-box">
                 <a href="tel:712030056" class="header-tell">
-                    <img class="header-tell-img" src="./images/phone-vector.svg" alt="phone" width="24" height="24">
+                    <img class="header-tell-img" src="{{ asset("arifsolar/images/phone-vector.svg")}}" alt="phone" width="24" height="24">
                     71 203 00 56
                 </a>
                 <span class="header-left-line"></span>
                 <a class="header-telegram-icon" href="https://t.me/solarzoneuz">
-                    <img src="./images/telegram-icon.svg" alt="telegram" width="44" height="44">
+                    <img src="{{ asset("arifsolar/images/telegram-icon.svg")}}" alt="telegram" width="44" height="44">
                 </a>
                 <span class="header-left-line"></span>
                 <button class="header-lang-icon">
-                    <img src="./images/lang-icon.svg" alt="telegram" width="44" height="44">
+                    <img src="{{ asset("arifsolar/images/lang-icon.svg")}}" alt="telegram" width="44" height="44">
                 </button>
             </div>
             <button class="hamburger-btn"></button>
@@ -95,24 +93,22 @@
                         <div class="inner modal-inner">
                             <div class="card modal-card">
                                 <div class="content modal-content">
-                                    <img src="./images/modal-img.png" alt="img" width="562" height="480">
+                                    <img src="{{ asset("arifsolar/images/modal-img.png")}}" alt="img" width="562" height="480">
                                 </div>
                             </div>
                             <div class="card modal-card">
                                 <div class="content modal-content">
-                                    <img src="./images/modal-img.png" alt="img" width="562" height="480">
+                                    <img src="{{ asset("arifsolar/images/modal-img.png")}}" alt="img" width="562" height="480">
                                 </div>
                             </div>
                             <div class="card modal-card">
                                 <div class="content modal-content">
-                                    <img src="./images/modal-img.png" alt="img" width="562" height="480">
+                                    <img src="{{ asset("arifsolar/images/modal-img.png")}}" alt="img" width="562" height="480">
                                 </div>
                             </div>
 
                         </div>
                     </div>
-
-
                 </div>
                 <div class="map modal-map">
                     <button class="active first"></button>
@@ -136,16 +132,16 @@
     <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
         <div class="hamburger-modal-box">
             <a href="tel:712030056" class="header-tell">
-                <img class="header-tell-img" src="./images/phone-vector.svg" alt="phone" width="24" height="24">
+                <img class="header-tell-img" src="{{ asset("arifsolar/images/phone-vector.svg")}}" alt="phone" width="24" height="24">
                 71 203 00 56
             </a>
             <span class="header-left-line"></span>
             <a class="header-telegram-icon" href="https://t.me/solarzoneuz">
-                <img src="./images/telegram-icon.svg" alt="telegram" width="44" height="44">
+                <img src="{{ asset("arifsolar/images/telegram-icon.svg")}}" alt="telegram" width="44" height="44">
             </a>
             <span class="header-left-line"></span>
             <button class="header-lang-icon">
-                <img src="./images/lang-icon.svg" alt="telegram" width="44" height="44">
+                <img src="{{ asset("arifsolar/images/lang-icon.svg")}}" alt="telegram" width="44" height="44">
             </button>
         </div>
         <button class="close-hamburger-modal"></button>

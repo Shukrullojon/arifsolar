@@ -5,11 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Group extends Model
+class Consultation extends Model
 {
     use HasFactory;
 
-    protected $table = 'groups';
+    protected $table = 'consultations';
 
     protected $guarded = [];
+
+    static $statuses = [
+        0 => "Arxive",
+        1 => "Active"
+    ];
 }
