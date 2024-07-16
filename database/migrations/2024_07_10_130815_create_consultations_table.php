@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
+            $table->string("title_uz");
+            $table->string("title_ru");
+            $table->text("description_uz");
+            $table->text("description_ru");
+            $table->tinyInteger("status")->default(0);
             $table->timestamps();
         });
     }

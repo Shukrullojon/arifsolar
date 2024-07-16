@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class JobController extends Controller
 {
@@ -11,7 +15,10 @@ class JobController extends Controller
      */
     public function index()
     {
-        //
+        $jobs = Job::latest()->paginate(20);
+        return view('job.index',[
+            'jobs' => $jobs,
+        ]);
     }
 
     /**
@@ -19,7 +26,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        //
+        return view('job.create');
     }
 
     /**
@@ -27,38 +34,106 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = Validator::make($request->all(),[
+            'title_uz' => 'required|string|max:200',
+            'title_ru' => 'required|string|max:200',
+            'address_uz' => 'required|string|max:200',
+            'address_uz' => 'required|string|max:200',
+            'width' => 'required|string|max:200',
+            'height' => 'required|string|max:200',
+        ]);
+        if ($validated->fails()){
+            return back()->withInput()->withErrors($validated);
+        }
+
+        if ($request->hasFile("image")){
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
+        Job::create([
+            'image' => $image ?? "",
+            'title_uz' => $request->title_uz,
+            'title_ru' => $request->title_ru,
+            'address_uz' => $request->address_uz,
+            'address_ru' => $request->address_ru,
+            'description_uz' => $request->description_uz,
+            'description_ru' => $request->description_ru,
+            'width' => $request->width,
+            'height' => $request->height,
+            'status' => $request->status,
+        ]);
+        return redirect()->route('job.index')->with('success','Job create successfuly');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Job $job)
     {
-        //
+        return view('job.show',[
+            'job' => $job,
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Job $job)
     {
-        //
+        return view('job.edit',[
+            'job' => $job
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Job $job)
     {
-        //
+        $validated = Validator::make($request->all(),[
+            'title_uz' => 'required|string|max:200',
+            'title_ru' => 'required|string|max:200',
+            'address_uz' => 'required|string|max:200',
+            'address_uz' => 'required|string|max:200',
+            'width' => 'required|string|max:200',
+            'height' => 'required|string|max:200',
+        ]);
+        if ($validated->fails()){
+            return back()->withInput()->withErrors($validated);
+        }
+        if ($request->hasFile("image")){
+            $filePath = public_path('files/' . $job->image);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
+        $job->update([
+            'image' => $image ?? $job->image,
+            'title_uz' => $request->title_uz,
+            'title_ru' => $request->title_ru,
+            'address_uz' => $request->address_uz,
+            'address_ru' => $request->address_ru,
+            'description_uz' => $request->description_uz,
+            'description_ru' => $request->description_ru,
+            'width' => $request->width,
+            'height' => $request->height,
+            'status' => $request->status,
+        ]);
+        return redirect()->route('job.index')->with('success','Job update successfuly');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Job $job)
     {
-        //
+        $filePath = public_path('files/' . $job->image);
+        if (File::exists($filePath)) {
+            File::delete($filePath);
+        }
+        $job->delete();
+        return redirect()->route('job.index')->with('success','job delete successfuly');
     }
 }

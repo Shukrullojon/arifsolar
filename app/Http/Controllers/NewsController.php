@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class NewsController extends Controller
 {
@@ -11,7 +14,10 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $news = News::latest()->paginate(20);
+        return view('new.index',[
+            'news' => $news,
+        ]);
     }
 
     /**
@@ -19,7 +25,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('new.create');
     }
 
     /**
@@ -27,38 +33,99 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = Validator::make($request->all(),[
+            'title_uz' => 'required|string|max:200',
+            'title_ru' => 'required|string|max:200',
+            'description_uz' => 'required|string|max:1200',
+            'description_ru' => 'required|string|max:1200',
+            'status' => 'required|integer|in:1,0',
+        ]);
+        if ($validated->fails()){
+            return back()->withInput()->withErrors($validated);
+        }
+
+        if ($request->hasFile("image")){
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
+
+        News::create([
+            'image' => $image ?? "",
+            'title_uz' => $request->title_uz,
+            'title_ru' => $request->title_ru,
+            'description_uz' => $request->description_uz,
+            'description_ru' => $request->description_ru,
+            'status' => $request->status,
+        ]);
+        return redirect()->route('news.index')->with('success','News create successfuly');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(News $news)
     {
-        //
+        return view('new.show',[
+            'news' => $news,
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(News $news)
     {
-        //
+        return view('new.edit',[
+            'news' => $news
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, News $news)
     {
-        //
+        $validated = Validator::make($request->all(),[
+            'title_uz' => 'required|string|max:200',
+            'title_ru' => 'required|string|max:200',
+            'description_uz' => 'required|string|max:1200',
+            'description_ru' => 'required|string|max:1200',
+            'status' => 'required|integer|in:1,0',
+        ]);
+        if ($validated->fails()){
+            return back()->withInput()->withErrors($validated);
+        }
+
+        if ($request->hasFile("image")){
+            $filePath = public_path('files/' . $news->image);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
+
+        $news->update([
+            'image' => $image ?? $news->image,
+            'title_uz' => $request->title_uz,
+            'title_ru' => $request->title_ru,
+            'description_uz' => $request->description_uz,
+            'description_ru' => $request->description_ru,
+            'status' => $request->status,
+        ]);
+        return redirect()->route('news.index')->with('success','News update successfuly');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(News $news)
     {
-        //
+        $filePath = public_path('files/' . $news->image);
+        if (File::exists($filePath)) {
+            File::delete($filePath);
+        }
+        $news->delete();
+        return redirect()->route('news.index')->with('success','News delete successfuly');
     }
 }

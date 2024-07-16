@@ -10,8 +10,8 @@ class About extends Model
     use HasFactory;
 
     static $statuses = [
-        0 => "Arxive",
-        1 => "Active"
+        1 => "Active ✅",
+        0 => "Arxive ❌",
     ];
 
     protected $table = 'abouts';

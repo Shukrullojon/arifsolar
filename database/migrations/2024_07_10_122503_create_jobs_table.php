@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string("image");
             $table->string("title_uz");
             $table->string("title_ru");
+            $table->text("description_uz")->nullable();
+            $table->text("description_ru")->nullable();
             $table->string("address_uz");
             $table->string("address_ru");
             $table->integer("width")->default(111);

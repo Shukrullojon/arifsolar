@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string("video")->nullable();
             $table->string("image")->nullable();
-            $table->string("title_uz")->nullable();
-            $table->string("title_ru")->nullable();
-            $table->string("description_uz")->nullable();
-            $table->string("description_ru")->nullable();
+            $table->string("title_uz",250)->nullable();
+            $table->string("title_ru",250)->nullable();
+            $table->text("description_uz")->nullable();
+            $table->text("description_ru")->nullable();
             $table->tinyInteger("status")->default(0);
             $table->timestamps();
         });

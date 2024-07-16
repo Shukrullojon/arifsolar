@@ -12,44 +12,75 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link {{ Request::is('home*') ? "active":'' }}">
+                    <a href="{{ route('home') }}" class="nav-link {{ Request::is('admin/home*') ? "active":'' }}">
                         <i class="fa fa-home"></i>
-                        <p>Главная</p>
+                        <p>Home</p>
                     </a>
                 </li>
 
-                <li class="nav-item {{ (Request::is('roles*') or Request::is('permissions*')) ? 'menu-open' : '' }}">
-                    <a href="#"
-                       class="nav-link {{ (Request::is('roles*') or Request::is('permissions*')) ? 'active' : '' }}">
-                        <i class="nav-icon fa fa-cog"></i>
-                        <p>
-                            Управление
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                <li class="nav-item">
+                    <a href="{{ route('about.index') }}" class="nav-link {{ Request::is('admin/about*') ? "active":'' }}">
+                        <i class="fa fa-info"></i>
+                        <p>Abouts</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Пользователями</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('roles.index') }}"
-                               class="nav-link {{ Request::is('roles*') ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Роли</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('permissions.index') }}"
-                               class="nav-link {{ Request::is('permissions*') ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Разрешение</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('work.index') }}" class="nav-link {{ Request::is('admin/work*') ? "active":'' }}">
+                        <i class="fa fa-tasks"></i>
+                        <p>Works</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('job.index') }}" class="nav-link {{ Request::is('admin/job*') ? "active":'' }}">
+                        <i class="fa fa-briefcase"></i>
+                        <p>Jobs</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('review.index') }}" class="nav-link {{ Request::is('admin/review*') ? "active":'' }}">
+                        <i class="fa fa-record-vinyl"></i>
+                        <p>Reviews</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('comment.index') }}" class="nav-link {{ Request::is('admin/comment*') ? "active":'' }}">
+                        <i class="fa fa-comment"></i>
+                        <p>Comments</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('news.index') }}" class="nav-link {{ Request::is('admin/news*') ? "active":'' }}">
+                        <i class="fa fa-newspaper"></i>
+                        <p>News</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('consultation.index') }}" class="nav-link {{ Request::is('admin/consultation*') ? "active":'' }}">
+                        <i class="fa fa-handshake"></i>
+                        <p>Consultation</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('partner.index') }}" class="nav-link {{ Request::is('admin/partner*') ? "active":'' }}">
+                        <i class="fa fa-space-shuttle"></i>
+                        <p>Partners</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('question.index') }}" class="nav-link {{ Request::is('admin/question*') ? "active":'' }}">
+                        <i class="fa fa-question"></i>
+                        <p>Questions</p>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -14,7 +14,7 @@ class Consultation extends Model
     protected $guarded = [];
 
     static $statuses = [
-        0 => "Arxive",
-        1 => "Active"
+        1 => "Active ✅",
+        0 => "Arxive ❌",
     ];
 }

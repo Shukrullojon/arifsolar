@@ -20,7 +20,7 @@
 
 <section class="header-top" id="header-top">
     <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-        <h1 class="header-top-title">Solar zone bilan hayotingizni qulay his qiling </h1>
+        <h1 class="header-top-title">@lang('front.info_header')</h1>
         <button class="header-top-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <rect width="32" height="32" rx="16" fill="white" fill-opacity="0.4"/>
@@ -35,8 +35,8 @@
             <div class="header-left-box">
                 <img src="{{ asset("arifsolar/images/Logo-1.svg")}}" alt="logo" width="305" height="58">
                 <span class="header-left-line"></span>
-                <h3 class="header-left-title">Установка солнечных <br>
-                    станций под ключ в Узбекистане</h3>
+                <h3 class="header-left-title">@lang('front.logo_1') <br>
+                    @lang('front.logo_2')</h3>
 
             </div>
             <div class="header-rigt-box">
@@ -49,9 +49,15 @@
                     <img src="{{ asset("arifsolar/images/telegram-icon.svg")}}" alt="telegram" width="44" height="44">
                 </a>
                 <span class="header-left-line"></span>
-                <button class="header-lang-icon">
-                    <img src="{{ asset("arifsolar/images/lang-icon.svg")}}" alt="telegram" width="44" height="44">
-                </button>
+                @php
+                    $lang = App::getLocale('locale') == "uz" ? "ru" : "uz";
+                    $img = App::getLocale('locale') == "uz" ? "lang-icon.svg" : "lang_icon_uz.svg";
+                @endphp
+                <a href="{{ route("language",$lang) }}">
+                    <button class="header-lang-icon">
+                        <img src="{{ asset("arifsolar/images/$img") }}" alt="telegram" width="44" height="44">
+                    </button>
+                </a>
             </div>
             <button class="hamburger-btn"></button>
         </div>
@@ -59,18 +65,15 @@
     <div class="container hero">
         <div class="hero-box">
             <h3 class="hero-title">
-                Установка солнечных станций под ключ в Узбекистане
+                @lang('front.hero_title')
             </h3>
             <p class="hero-desc">
-                Заполните форму и получите бесплатную консультацию и расчет стоимости
+                @lang('front.hero_desc')
             </p>
-            <form class="hero-form" id="hero-form" action="mailto:arial.uz@gmail.com" method="post" enctype="text/plain"
-                  autocomplete="off">
-                <input class="hero-name-input" type="text" name="name" placeholder="Ваше имя" required>
-                <input class="hero-tel-input" type="tel" value="+998" name="Tell number"
-                       placeholder="+998 99 -000-00-00" required>
-                <button class="hero-btn" type="submit" id="hero-btn">Узнать стоимость <span
-                        class="hero-btn-icon"></span></button>
+            <form class="hero-form" id="hero-form" action="mailto:arial.uz@gmail.com" method="post" enctype="text/plain" autocomplete="off">
+                <input class="hero-name-input" type="text" name="name" placeholder="@lang('front.name')" required>
+                <input class="hero-tel-input" type="tel" value="+998" name="Tell number" placeholder="+998 99 -000-00-00" required>
+                <button class="hero-btn" type="submit" id="hero-btn">@lang('front.button_submit')<span class="hero-btn-icon"></span></button>
             </form>
         </div>
     </div>
@@ -80,7 +83,7 @@
 
 <footer>
     <div class="container">
-        <h3 class="footer-title">Barcha huquqlar himoyalangan. © Aril.uz</h3>
+        <h3 class="footer-title">@lang('front.reserved') © Aril.uz</h3>
     </div>
 </footer>
 <div class="our-work-modal hidden" id="ourWorkModal">
