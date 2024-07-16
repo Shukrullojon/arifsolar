@@ -28,5 +28,11 @@ return [
     "add" => "Manzil",
     "email" => "Pochta",
     "time" => "Ish vaqti",
-    "time_info" => "Dushanba-Juma 8:00 dan 18:00 gacha"
+    "time_info" => "Dushanba-Juma 8:00 dan 18:00 gacha",
+    "consul_title" => "Bepul",
+    "consul_title_1" => "konsultatsiya",
+    "consult_info" => "Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq qilamiz va birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz",
+    "send_request" => "So’rov yuborish",
+    "question_title" => "Tez tez so'raladigan ",
+    "question_title_1" => "savollar",
 ];

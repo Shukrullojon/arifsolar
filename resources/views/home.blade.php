@@ -48,78 +48,29 @@
             </section>
         @endif
 
-        <section class="our-jobs">
-            <div class="container">
-                <div
-                    style=" margin: 0px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between;">
-                    <div class="work-title-box our-jobs-title-box">
-                        <span class="about-title-line"></span>
-                        <h3 class="work-title">@lang('front.job')</h3>
-                    </div>
-                </div>
-                <ul class="our-jobs-list">
-                    <li class="our-jobs-item" id="ourJobsItem1">
-                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}"
-                             alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem2">
-                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}"
-                             alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem3">
-                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}"
-                             alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li id="jobsItem">
-                        <div class="our-jobs-item our-jobs-item-box" id="ourJobsItem4">
-                            <img style=" margin-bottom: 4px;"
-                                 src="{{ asset("arifsolar/images/murad-building-icon.svg")}}" alt="icon" width="88"
-                                 height="74">
-                            <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                            <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
+
+        @if(count($jobs))
+            <section class="our-jobs">
+                <div class="container">
+                    <div
+                        style=" margin: 0px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between;">
+                        <div class="work-title-box our-jobs-title-box">
+                            <span class="about-title-line"></span>
+                            <h3 class="work-title">@lang('front.job')</h3>
                         </div>
-                        <button class="our-jobs-item-btn">Ещё</button>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem5">
-                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}"
-                             alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem6">
-                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}"
-                             alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem7">
-                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}"
-                             alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem8">
-                        <img style="margin-bottom: 26px;" src="{{ asset("arifsolar/images/mb-white-icon.svg")}}"
-                             alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                    </div>
+                    <ul class="our-jobs-list">
+                        @foreach($jobs as $job)
+                            <li class="our-jobs-item" id="ourJobsItem1">
+                                <img style="margin-bottom: 26px;" src="{{ asset("public/files/".$job->image) }}" alt="icon" width="{{ $job->width }}" height="{{ $job->height }}">
+                                <h3 class="our-jobs-item-title">{{ $job->title }}</h3>
+                                <p class="our-jobs-item-desc">{{ $job->address }}</p>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </section>
+        @endif
 
         @if(count($reviews))
             <section class="about-customer">
@@ -245,80 +196,50 @@
             </section>
         @endif
 
-        <section class="free-tial-section about-customer">
-            <div class="container">
-                <div style="  margin-bottom: 64px;">
-                    <div class="work-title-box about-customer-title-box">
-                        <span class="about-title-line"></span>
-                        <h3 class="work-title">Бесплатная <span class="work-title-span">консультация  </span></h3>
+        @if(count($consultations))
+            <section class="free-tial-section about-customer">
+                <div class="container">
+                    <div style="  margin-bottom: 64px;">
+                        <div class="work-title-box about-customer-title-box">
+                            <span class="about-title-line"></span>
+                            <h3 class="work-title">@lang("front.consul_title") <span class="work-title-span"> @lang("front.consul_title_1")  </span></h3>
+                        </div>
                     </div>
-                </div>
-                <div class="free-tial-box">
-                    <div class="free-tial-carousel-box">
-                        <div class="center">
-                            <div class="wrapper">
-                                <div class="inner">
-                                    <div class="card">
-                                        <div class="content">
-                                            <h1 class="free-tial-item-title">Butun o’zbekiston bo’ylab tarmoqlar</h1>
-                                            <p class="free-tial-item-desc"> 🔆 O'zbekiston quyosh energiyasi bozorining
-                                                joriy
-                                                holati <br>
-                                                🔍 2024-yilda kutayotgan eng yangi o'zgarishlar va tendentsiyalar <br>
-                                                🚀 Energetika sohasidagi yangi proyektlar va investitsiyalar</p>
-                                        </div>
+                    <div class="free-tial-box">
+                        <div class="free-tial-carousel-box">
+                            <div class="center">
+                                <div class="wrapper">
+                                    <div class="inner">
+                                        @foreach($consultations as $consultation)
+                                            <div class="card">
+                                                <div class="content">
+                                                    <h1 class="free-tial-item-title">{{ $consultation->title }}</h1>
+                                                    <p class="free-tial-item-desc">{!! $consultation->description !!}</p>
+                                                </div>
+                                            </div>
+                                        @endforeach
                                     </div>
-                                    <div class="card">
-                                        <div class="content">
-                                            <h1 class="free-tial-item-title">Butun o’zbekiston bo’ylab tarmoqlar</h1>
-                                            <p class="free-tial-item-desc"> 🔆 O'zbekiston quyosh energiyasi bozorining
-                                                joriy
-                                                holati <br>
-                                                🔍 2024-yilda kutayotgan eng yangi o'zgarishlar va tendentsiyalar <br>
-                                                🚀 Energetika sohasidagi yangi proyektlar va investitsiyalar</p>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="content">
-                                            <h1 class="free-tial-item-title">Butun o’zbekiston bo’ylab tarmoqlar</h1>
-                                            <p class="free-tial-item-desc"> 🔆 O'zbekiston quyosh energiyasi bozorining
-                                                joriy
-                                                holati <br>
-                                                🔍 2024-yilda kutayotgan eng yangi o'zgarishlar va tendentsiyalar <br>
-                                                🚀 Energetika sohasidagi yangi proyektlar va investitsiyalar</p>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
-
-
+                            <div class="map">
+                                <button class="active first"></button>
+                                <button class="second"></button>
+                                <button class="third"></button>
+                            </div>
                         </div>
-                        <div class="map">
-                            <button class="active first"></button>
-                            <button class="second"></button>
-                            <button class="third"></button>
+                        <div class="free-tial-contact">
+                            <h3 class="free-tial-contact-title">@lang("front.consul_title") @lang("front.consul_title_1")</h3>
+                            <p class="free-tial-contact-desc">@lang("front.consult_info")</p>
+                            <form id="freeTialContactForm" action="mailto:arial.uz@gmail.com" method="post" enctype="text/plain" autocomplete="off">
+                                <input class="hero-name-input free-tial-contact-input" type="text" name="Name" placeholder="@lang("front.name")">
+                                <input class="hero-tel-input free-tial-contact-input" id="free-tial-tell" style="margin-bottom: 58px;" type="tel" name="Phone number" placeholder="+998 99 -000-00-00" required value="+998">
+                                <button class="free-tial-contact-btn">@lang("front.send_request")</button>
+                            </form>
                         </div>
-                    </div>
-                    <div class="free-tial-contact">
-                        <h3 class="free-tial-contact-title">Bepul konsultatsiya</h3>
-                        <p class="free-tial-contact-desc">Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq
-                            qilamiz
-                            va birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz</p>
-                        <form id="freeTialContactForm" action="mailto:arial.uz@gmail.com" method="post"
-                              enctype="text/plain"
-                              autocomplete="off">
-                            <input class="hero-name-input free-tial-contact-input" type="text" name="Name"
-                                   placeholder="Ismingizni kiriting">
-                            <input class="hero-tel-input free-tial-contact-input" id="free-tial-tell"
-                                   style="margin-bottom: 58px;" type="tel" name="Phone number"
-                                   placeholder="+998 99 -000-00-00" required value="+998">
-                            <button class="free-tial-contact-btn">So’rov yuborish</button>
-                        </form>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        @endif
 
         @if(count($partners))
             <section class="partners about-customer">
@@ -390,60 +311,30 @@
             </div>
         </section>
 
-        <section class="questions about-customer">
-            <div class="container">
-                <div style="  margin-bottom: 64px;">
-                    <div class="work-title-box about-customer-title-box">
-                        <span class="about-title-line"></span>
-                        <h3 class="work-title">Часто задаваемые <span class="work-title-span"> вопросы   </span></h3>
-                    </div>
-                </div>
-                <div class="questions-list">
-                    <div class="questions-item" id="questionsItem1">
-                        <div class="questions-item-box">
-                            <h5 class="questions-item-title">Saqlash muddati qancha ?</h5>
-                            <button class="questions-item-btn"></button>
+        @if(count($questions))
+            <section class="questions about-customer">
+                <div class="container">
+                    <div style="  margin-bottom: 64px;">
+                        <div class="work-title-box about-customer-title-box">
+                            <span class="about-title-line"></span>
+                            <h3 class="work-title">@lang("front.question_title") <span class="work-title-span"> @lang("front.question_title_1")   </span></h3>
                         </div>
-                        <p class="questions-item-desc">telefon raqamingizni qoldiring</p>
                     </div>
-                    <div class="questions-item" id="questionsItem2">
-                        <div class="questions-item-box">
-                            <h5 class="questions-item-title">Saqlash muddati qancha ?</h5>
-                            <button class="questions-item-btn"></button>
-                        </div>
-                        <p class="questions-item-desc">telefon raqamingizni qoldiring</p>
+                    <div class="questions-list">
+
+                        @foreach($questions as $question)
+                            <div class="questions-item" id="questionsItem1">
+                                <div class="questions-item-box">
+                                    <h5 class="questions-item-title">{{ $question->title }}</h5>
+                                    <button class="questions-item-btn"></button>
+                                </div>
+                                <p class="questions-item-desc">{{ $question->description }}</p>
+                            </div>
+                        @endforeach
+                        </ul>
                     </div>
-                    <div class="questions-item" id="questionsItem3">
-                        <div class="questions-item-box">
-                            <h5 class="questions-item-title">Saqlash muddati qancha ?</h5>
-                            <button class="questions-item-btn"></button>
-                        </div>
-                        <p class="questions-item-desc">telefon raqamingizni qoldiring</p>
-                    </div>
-                    <div class="questions-item" id="questionsItem4">
-                        <div class="questions-item-box">
-                            <h5 class="questions-item-title">Saqlash muddati qancha ?</h5>
-                            <button class="questions-item-btn"></button>
-                        </div>
-                        <p class="questions-item-desc">telefon raqamingizni qoldiring</p>
-                    </div>
-                    <div class="questions-item" id="questionsItem5">
-                        <div class="questions-item-box">
-                            <h5 class="questions-item-title">Saqlash muddati qancha ?</h5>
-                            <button class="questions-item-btn"></button>
-                        </div>
-                        <p class="questions-item-desc">telefon raqamingizni qoldiring</p>
-                    </div>
-                    <div class="questions-item" id="questionsItem6">
-                        <div class="questions-item-box">
-                            <h5 class="questions-item-title">Saqlash muddati qancha ?</h5>
-                            <button class="questions-item-btn"></button>
-                        </div>
-                        <p class="questions-item-desc">telefon raqamingizni qoldiring</p>
-                    </div>
-                    </ul>
-                </div>
-        </section>
+            </section>
+        @endif
 
     </main>
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Comment;
+use App\Models\Consultation;
+use App\Models\Job;
 use App\Models\News;
 use App\Models\Partner;
 use App\Models\Question;
@@ -24,6 +26,8 @@ class HomeController extends Controller
         $news = News::select("image","title_$locale as title", "description_$locale as description","created_at")->where('status',1)->latest()->get();
         $partners = Partner::select("link")->where('status',1)->latest()->get();
         $questions = Question::select("title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
+        $jobs = Job::select("image","title_$locale as title", "description_$locale as description", "address_$locale as address","width","height","status")->where('status',1)->latest()->get();
+        $consultations = Consultation::select("title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
         return view('home',[
             'about' => $about,
             'works' => $works,
@@ -32,6 +36,8 @@ class HomeController extends Controller
             'news' => $news,
             'partners' => $partners,
             'questions' => $questions,
+            'jobs' => $jobs,
+            'consultations' => $consultations,
         ]);
     }
 

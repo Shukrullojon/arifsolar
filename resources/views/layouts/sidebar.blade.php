@@ -11,12 +11,12 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item">
+                {{--<li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link {{ Request::is('admin/home*') ? "active":'' }}">
                         <i class="fa fa-home"></i>
                         <p>Home</p>
                     </a>
-                </li>
+                </li>--}}
 
                 <li class="nav-item">
                     <a href="{{ route('about.index') }}" class="nav-link {{ Request::is('admin/about*') ? "active":'' }}">
