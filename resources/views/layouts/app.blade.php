@@ -86,6 +86,7 @@
         <h3 class="footer-title">@lang('front.reserved') © Aril.uz</h3>
     </div>
 </footer>
+
 <div class="our-work-modal hidden" id="ourWorkModal">
     <div class="modal ">
         <!-- <button class="close-modal">&times;</button> -->
@@ -109,7 +110,6 @@
                                     <img src="{{ asset("arifsolar/images/modal-img.png")}}" alt="img" width="562" height="480">
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

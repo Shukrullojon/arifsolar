@@ -60,8 +60,9 @@
                         </div>
                     </div>
                     <ul class="our-jobs-list">
+                        @php $i=1; @endphp
                         @foreach($jobs as $job)
-                            <li class="our-jobs-item" id="ourJobsItem1">
+                            <li class="our-jobs-item" id="ourJobsItem{{ $i++ }}">
                                 <img style="margin-bottom: 26px;" src="{{ asset("public/files/".$job->image) }}" alt="icon" width="{{ $job->width }}" height="{{ $job->height }}">
                                 <h3 class="our-jobs-item-title">{{ $job->title }}</h3>
                                 <p class="our-jobs-item-desc">{{ $job->address }}</p>

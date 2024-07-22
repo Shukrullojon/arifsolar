@@ -1,8 +1,5 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="" class="brand-link">
-        <img src="{{ asset("admin_lte_3.2.0/dist/img/AdminLTELogo.png") }}" alt="AdminLTE Logo"
-             class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="" class="brand-link" style="margin-left: 18px">
         <span class="brand-text font-weight-light">ARIF | SOLAR</span>
     </a>
 

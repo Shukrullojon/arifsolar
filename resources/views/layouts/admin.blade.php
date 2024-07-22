@@ -38,7 +38,7 @@
             </li>
         </ul>
 
-        <!-- Right navbar links -->
+        <!-- Rightbar links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-user"></i>

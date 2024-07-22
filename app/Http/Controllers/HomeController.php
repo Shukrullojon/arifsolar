@@ -12,11 +12,14 @@ use App\Models\Question;
 use App\Models\Review;
 use App\Models\Work;
 use Illuminate\Http\Request;
+use Revolution\Google\Sheets\Facades\Sheets;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
+        Sheets::spreadsheet(config('sheets.spreadsheet_id'))->addSheet('sheetTitle');
+
         $locale = $request->session()->get('locale');
         $locale = $locale ?: "uz";
         $about = About::select("video","image","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->first();
