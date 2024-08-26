@@ -21,42 +21,42 @@ class PartnerSeeder extends Seeder
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
                 'status' => 1,
             ],
             [
