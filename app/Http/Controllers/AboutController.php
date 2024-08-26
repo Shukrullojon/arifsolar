@@ -16,6 +16,7 @@ class AboutController extends Controller
     {
         $abouts = About::latest()->paginate(20);
         return view('about.index',[
+
             'abouts' => $abouts,
         ]);
     }
