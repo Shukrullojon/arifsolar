@@ -27,7 +27,7 @@ class ApiController extends Controller
             'partners' => Partner::where('status', 1)->get(),
             'questions' => Question::where('status', 1)->get(),
             'reviews' => Review::where('status', 1)->get(),
-            'users' => User::where('status', 1)->get(),
+            'users' => User::all(),
             'works' => Work::where('status', 1)->get(),
         ];
 
