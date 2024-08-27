@@ -16,7 +16,6 @@ class AboutController extends Controller
     {
         $abouts = About::latest()->paginate(20);
         return view('about.index',[
-
             'abouts' => $abouts,
         ]);
     }
@@ -61,6 +60,10 @@ class AboutController extends Controller
             'description_uz' => $request->description_uz,
             'description_ru' => $request->description_ru,
             'status' => $request->status,
+            'video_alt_uz' => $request->video_alt_uz,
+            'video_alt_ru' => $request->video_alt_ru,
+            'img_alt_uz' => $request->img_alt_uz,
+            'img_alt_ru' => $request->img_alt_ru,
         ]);
         return redirect()->route('about.index')->with('success','About create successfuly');
     }
@@ -125,6 +128,11 @@ class AboutController extends Controller
             'description_uz' => $request->description_uz,
             'description_ru' => $request->description_ru,
             'status' => $request->status,
+            'video_alt_uz' => $request->video_alt_uz,
+            'video_alt_ru' => $request->video_alt_ru,
+            'img_alt_uz' => $request->img_alt_uz,
+            'img_alt_ru' => $request->img_alt_ru,
+
         ]);
         return redirect()->route('about.index')->with('success','About update successfuly');
     }

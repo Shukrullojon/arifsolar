@@ -54,6 +54,16 @@
                             </tr>
 
                             <tr>
+                                <th>Img alt(uz)</th>
+                                <td>{{ $job->img_alt_uz }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Img alt(ru)</th>
+                                <td>{{ $job->img_alt_ru }}</td>
+                            </tr>
+
+                            <tr>
                                 <th>Status</th>
                                 <td>{{ \App\Models\Job::$statuses[$job->status] }}</td>
                             </tr>

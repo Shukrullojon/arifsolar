@@ -42,6 +42,16 @@
                             </tr>
 
                             <tr>
+                                <th>Img Alt(uz)</th>
+                                <td>{{ $news->img_alt_uz }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Img Alt(ru)</th>
+                                <td>{{ $news->img_alt_ru }}</td>
+                            </tr>
+
+                            <tr>
                                 <th>Status</th>
                                 <td>{{ \App\Models\News::$statuses[$news->status] }}</td>
                             </tr>

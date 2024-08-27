@@ -35,6 +35,10 @@
                                 <th>Descrition(uz)</th>
                                 <th>Image</th>
                                 <th>Video</th>
+                                <th>Video Alt(uz)</th>
+                                <th>Video Alt(ru)</th>
+                                <th>Image Alt(uz)</th>
+                                <th>Image Alt(ru)</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -50,7 +54,12 @@
                                     <td>
                                         <video controls src="{{ asset("public/files/".$about->video) }}" width="100"></video>
                                     </td>
+                                    <td>{{ $about->video_alt_uz }}</td>
+                                    <td>{{ $about->video_alt_ru }}</td>
+                                    <td>{{ $about->img_alt_uz }}</td>
+                                    <td>{{ $about->img_alt_uz }}</td>
                                     <td>{{ \App\Models\About::$statuses[$about->status] }}</td>
+
                                     <td class="text-center">
                                         <div class="btn-group">
                                             <a class="" href="{{ route('about.show',$about->id) }}"

@@ -7,3 +7,5 @@ Route::post('webhook', [\App\Http\Controllers\WebhookController::class,'index'])
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/data', [\App\Http\Controllers\ApiController::class, 'getData']);

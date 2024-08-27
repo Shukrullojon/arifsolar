@@ -73,6 +73,46 @@
                                 </div>
                             </div>
 
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="video_alt_uz"><strong>Video Alt(uz):</strong></label>{!! Form::label('video_alt_uz',"*",['style'=>"color:red"]) !!}
+                                    {!! Form::textarea('video_alt_uz', null, ['rows' => 4,'autocomplete'=>'OFF','id'=>'video_alt_uz','placeholder' => 'Video Alt(uz)','required'=>true,'class' => "form-control ".($errors->has('video_alt_uz') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('video_alt_uz'))
+                                        <span class="error invalid-feedback">{{ $errors->first('video_alt_uz') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="video_alt_ru"><strong>Img Alt(ru):</strong></label>{!! Form::label('video_alt_ru',"*",['style'=>"color:red"]) !!}
+                                    {!! Form::textarea('video_alt_ru', null, ['rows' => 4,'autocomplete'=>'OFF','id'=>'video_alt_ru','placeholder' => 'Video Alt(ru)','required'=>true,'class' => "form-control ".($errors->has('video_alt_ru') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('video_alt_ru'))
+                                        <span class="error invalid-feedback">{{ $errors->first('video_alt_ru') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="img_alt_uz"><strong>Img Alt(uz):</strong></label>{!! Form::label('img_alt_uz',"*",['style'=>"color:red"]) !!}
+                                    {!! Form::textarea('img_alt_uz', null, ['rows' => 4,'autocomplete'=>'OFF','id'=>'img_alt_uz','placeholder' => 'Img Alt(uz)','required'=>true,'class' => "form-control ".($errors->has('img_alt_uz') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('img_alt_uz'))
+                                        <span class="error invalid-feedback">{{ $errors->first('img_alt_uz') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="img_alt_ru"><strong>Video Alt(ru):</strong></label>{!! Form::label('img_alt_ru',"*",['style'=>"color:red"]) !!}
+                                    {!! Form::textarea('img_alt_ru', null, ['rows' => 4,'autocomplete'=>'OFF','id'=>'img_alt_ru','placeholder' => 'Img Alt(ru)','required'=>true,'class' => "form-control ".($errors->has('img_alt_ru') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('img_alt_ru'))
+                                        <span class="error invalid-feedback">{{ $errors->first('img_alt_ru') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <label for="status"><strong>Статус:</strong></label>{!! Form::label('status',"*",['style'=>"color:red"]) !!}

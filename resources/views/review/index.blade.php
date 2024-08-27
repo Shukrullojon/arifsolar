@@ -33,6 +33,8 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Video</th>
+                                <th>Video Alt(uz)</th>
+                                <th>Video Alt(ru)</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -44,6 +46,8 @@
                                     <td>
                                         <video controls src="{{ asset("public/files/".$review->video) }}" width="100"></video>
                                     </td>
+                                    <td>{{ $review->video_alt_uz }}</td>
+                                    <td>{{ $review->video_alt_ru }}</td>
                                     <td>{{ \App\Models\Review::$statuses[$review->status] }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">

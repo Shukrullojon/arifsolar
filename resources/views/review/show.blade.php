@@ -26,6 +26,17 @@
                                     <video autoplay controls src="{{ asset("public/files/".$review->video) }}" width="200"></video>
                                 </td>
                             </tr>
+
+                            <tr>
+                                <th>Video Alt(uz)</th>
+                                <td>{{ $review->video_alt_uz }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Video Alt(ru)</th>
+                                <td>{{ $review->video_alt_ru }}</td>
+                            </tr>
+
                             <tr>
                                 <th>Status</th>
                                 <td>{{ \App\Models\Review::$statuses[$review->status] }}</td>

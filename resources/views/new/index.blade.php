@@ -34,6 +34,8 @@
                                 <th>Title(uz)</th>
                                 <th>Descrition(uz)</th>
                                 <th>Image</th>
+                                <th>Image Alt(uz)</th>
+                                <th>Image Alt(ru)</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -46,6 +48,8 @@
                                     <td>
                                         <img src="{{ asset("public/files/".$n->image) }}" width="100">
                                     </td>
+                                    <td>{!! $n->img_alt_uz !!}</td>
+                                    <td>{!! $n->img_alt_ru !!}</td>
                                     <td>{{ \App\Models\News::$statuses[$n->status] }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">

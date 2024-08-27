@@ -46,6 +46,27 @@
                                     <video controls src="{{ asset("public/files/".$about->video) }}" width="200"></video>
                                 </td>
                             </tr>
+
+                            <tr>
+                                <th>Video Alt(uz)</th>
+                                <td>{{ $about->video_alt_uz }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Video Alt(ru)</th>
+                                <td>{{ $about->video_alt_ru }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Img Alt(uz)</th>
+                                <td>{{ $about->img_alt_uz }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Img Alt(ru)</th>
+                                <td>{{ $about->img_alt_ru }}</td>
+                            </tr>
+
                             <tr>
                                 <th>Status</th>
                                 <td>{{ \App\Models\About::$statuses[$about->status] }}</td>
