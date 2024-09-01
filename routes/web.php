@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/new', [App\Http\Controllers\HomeController::class, 'new']);
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'profile']);
+});
 
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group(function () {
