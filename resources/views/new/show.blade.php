@@ -42,6 +42,15 @@
                             </tr>
 
                             <tr>
+                                <th>Modal Images</th>
+                                <td>
+                                    @foreach($news->files as $f)
+                                        <img src="{{ asset("public/files/".$f->file) }}" height="150px" width="150px" style="margin: 5px">
+                                    @endforeach
+                                </td>
+                            </tr>
+
+                            <tr>
                                 <th>Img Alt(uz)</th>
                                 <td>{{ $news->img_alt_uz }}</td>
                             </tr>

@@ -49,14 +49,27 @@ class NewsController extends Controller
             $request->image->move(public_path('files'), $image);
         }
 
-        News::create([
+        $new = News::create([
             'image' => $image ?? "",
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'description_uz' => $request->description_uz,
             'description_ru' => $request->description_ru,
             'status' => $request->status,
+            'img_alt_uz' => $request->img_alt_uz,
+            'img_alt_ru' => $request->img_alt_ru,
         ]);
+        if ($request->hasFile('file')) {
+            foreach ($request->file as $f){
+                $file_name = date('Y_m_d_H_i_s').rand(10000, 99999).'.'.$f->getClientOriginalExtension();
+                $f->move(public_path('files'), $file_name);
+                \App\Models\File::create([
+                    'model' => News::class,
+                    'model_id' => $new->id,
+                    'file' => $file_name,
+                ]);
+            }
+        }
         return redirect()->route('news.index')->with('success','News create successfuly');
     }
 
@@ -124,6 +137,12 @@ class NewsController extends Controller
         $filePath = public_path('files/' . $news->image);
         if (File::exists($filePath)) {
             File::delete($filePath);
+        }
+        foreach ($news->files as $f){
+            $ff = public_path('files/' . $f->file);
+            if (File::exists($ff)) {
+                File::delete($ff);
+            }
         }
         $news->delete();
         return redirect()->route('news.index')->with('success','News delete successfuly');

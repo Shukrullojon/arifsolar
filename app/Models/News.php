@@ -17,4 +17,10 @@ class News extends Model
         1 => "Active ✅",
         0 => "Arxive ❌",
     ];
+
+
+    public function files()
+    {
+        return $this->hasMany(File::class,'model_id','id')->where('model',self::class);
+    }
 }

@@ -9,3 +9,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/data', [\App\Http\Controllers\ApiController::class, 'getData']);
+Route::post('/message', [\App\Http\Controllers\ApiController::class, 'sendMessage']);
