@@ -23,7 +23,7 @@ class ApiController extends Controller
             'abouts' => About::where('status', 1)->get(),
             'comments' => Comment::where('status', 1)->get(),
             'consultations' => Consultation::where('status', 1)->get(),
-            'jobs' => Job::where('status', 1)->get(),
+            'jobs' => Job::with('files')->where('status', 1)->get(),
             'news' => News::with('files')->where('status', 1)->get(),
             'partners' => Partner::where('status', 1)->get(),
             'questions' => Question::where('status', 1)->get(),
@@ -42,7 +42,6 @@ class ApiController extends Controller
         Http::post('https://api.telegram.org/bot'.$token.'/sendMessage',[
             'chat_id' => -1002237430774,
             'text' => $text,
-            'parse_mode' => 'HTML'
         ]);
     }
 }

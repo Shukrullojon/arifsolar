@@ -12,12 +12,32 @@
                     <div class="card-body">
                         {!! Form::open(['route' => 'job.store','method'=>'POST','enctype' => 'multipart/form-data']) !!}
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
                                     <label for="image"><strong>Image:</strong></label>{!! Form::label('image',"*",['style'=>"color:red"]) !!}<br>
                                     {!! Form::file('image', null, ['autocomplete'=>'OFF','id'=>'image','placeholder' => 'Image','required'=>true,'class' => "form-control ".($errors->has('image') ? 'is-invalid' : '')]) !!}
                                     @if($errors->has('image'))
                                         <span class="error invalid-feedback">{{ $errors->first('image') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="image"><strong>Modal Images:</strong></label>{!! Form::label('file',"*",['style'=>"color:red"]) !!}<br>
+                                    <input type="file" name="file[]" multiple="multiple" class="form-control">
+                                    @if($errors->has('file'))
+                                        <span class="error invalid-feedback">{{ $errors->first('file') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="image_logo"><strong>Image Logo:</strong></label>{!! Form::label('image_lgo',"*",['style'=>"color:red"]) !!}<br>
+                                    {!! Form::file('image_lgo', null, ['autocomplete'=>'OFF','id'=>'image_lgo','placeholder' => 'Image Logo','required'=>true,'class' => "form-control ".($errors->has('image_lgo') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('image_lgo'))
+                                        <span class="error invalid-feedback">{{ $errors->first('image_lgo') }}</span>
                                     @endif
                                 </div>
                             </div>

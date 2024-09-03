@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Job;
+use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
@@ -50,8 +51,13 @@ class JobController extends Controller
             $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
             $request->image->move(public_path('files'), $image);
         }
-        Job::create([
+        if ($request->hasFile("image_logo")){
+            $image_logo = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image_logo->getClientOriginalExtension();
+            $request->image_logo->move(public_path('files'), $image_logo);
+        }
+        $job = Job::create([
             'image' => $image ?? "",
+            'image_logo' => $image_logo ?? "",
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'address_uz' => $request->address_uz,
@@ -62,6 +68,17 @@ class JobController extends Controller
             'height' => $request->height,
             'status' => $request->status,
         ]);
+        if ($request->hasFile('file')) {
+            foreach ($request->file as $f){
+                $file_name = date('Y_m_d_H_i_s').rand(10000, 99999).'.'.$f->getClientOriginalExtension();
+                $f->move(public_path('files'), $file_name);
+                \App\Models\File::create([
+                    'model' => Job::class,
+                    'model_id' => $job->id,
+                    'file' => $file_name,
+                ]);
+            }
+        }
         return redirect()->route('job.index')->with('success','Job create successfuly');
     }
 
@@ -132,6 +149,12 @@ class JobController extends Controller
         $filePath = public_path('files/' . $job->image);
         if (File::exists($filePath)) {
             File::delete($filePath);
+        }
+        foreach ($job->files as $f){
+            $ff = public_path('files/' . $f->file);
+            if (File::exists($ff)) {
+                File::delete($ff);
+            }
         }
         $job->delete();
         return redirect()->route('job.index')->with('success','job delete successfuly');

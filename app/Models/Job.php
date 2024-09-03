@@ -18,4 +18,8 @@ class Job extends Model
 
     protected $guarded = [];
 
+    public function files()
+    {
+        return $this->hasMany(File::class,'model_id','id')->where('model',self::class);
+    }
 }
