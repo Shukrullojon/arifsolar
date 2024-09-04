@@ -24,10 +24,10 @@
 
                             <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
-                                    <label for="image"><strong>Modal Images:</strong></label>{!! Form::label('image',"*",['style'=>"color:red"]) !!}<br>
+                                    <label for="file"><strong>Modal Images:</strong></label>{!! Form::label('image',"*",['style'=>"color:red"]) !!}<br>
                                     <input type="file" name="file[]" multiple="multiple" class="form-control">
-                                    @if($errors->has('image'))
-                                        <span class="error invalid-feedback">{{ $errors->first('image') }}</span>
+                                    @if($errors->has('file'))
+                                        <span class="error invalid-feedback">{{ $errors->first('file') }}</span>
                                     @endif
                                 </div>
                             </div>

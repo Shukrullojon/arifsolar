@@ -13,17 +13,27 @@
                         {!! Form::model($news, ['method' => 'PATCH','route' => ['news.update', $news->id], 'enctype' => 'multipart/form-data']) !!}
                         <div class="row">
 
-                            <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
-                                    <label for="image"><strong>Image:</strong></label>{!! Form::label('image',"*",['style'=>"color:red"]) !!}<br>
-                                    {!! Form::file('image', null, ['autocomplete'=>'OFF','id'=>'image','placeholder' => 'Image','required'=>true,'class' => "form-control ".($errors->has('image') ? 'is-invalid' : '')]) !!}
+                                    <label for="image"><strong>Image:</strong></label>
+                                    {!! Form::file('image', null, ['autocomplete'=>'OFF','id'=>'image','placeholder' => 'Image','class' => "form-control ".($errors->has('image') ? 'is-invalid' : '')]) !!}
                                     @if($errors->has('image'))
                                         <span class="error invalid-feedback">{{ $errors->first('image') }}</span>
                                     @endif
                                 </div>
                             </div>
 
-                            <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="file"><strong>Modal Images:</strong></label>
+                                    <input type="file" name="file[]" multiple="multiple" class="form-control">
+                                    @if($errors->has('file'))
+                                        <span class="error invalid-feedback">{{ $errors->first('file') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
                                     <label for="status"><strong>Статус:</strong></label>{!! Form::label('status',"*",['style'=>"color:red"]) !!}
                                     {!! Form::select('status', \App\Models\About::$statuses,null, ['autocomplete'=>'OFF','id'=>'status','required'=>true,'class' => "form-control ".($errors->has('status') ? 'is-invalid' : '')]) !!}

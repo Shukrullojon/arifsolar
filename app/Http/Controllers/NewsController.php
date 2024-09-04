@@ -118,6 +118,26 @@ class NewsController extends Controller
             $request->image->move(public_path('files'), $image);
         }
 
+        if ($request->hasFile('file')) {
+            $file_db = \App\Models\File::where('model',News::class)->where('model_id',$news->id)->get();
+            foreach ($file_db as $f_d){
+                $filePath = public_path('files/' . $f_d->file);
+                if (File::exists($filePath)) {
+                    File::delete($filePath);
+                }
+                $f_d->delete();
+            }
+            foreach ($request->file as $f){
+                $file_name = date('Y_m_d_H_i_s').rand(10000, 99999).'.'.$f->getClientOriginalExtension();
+                $f->move(public_path('files'), $file_name);
+                \App\Models\File::create([
+                    'model' => News::class,
+                    'model_id' => $news->id,
+                    'file' => $file_name,
+                ]);
+            }
+        }
+
         $news->update([
             'image' => $image ?? $news->image,
             'title_uz' => $request->title_uz,

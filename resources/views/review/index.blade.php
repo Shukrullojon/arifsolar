@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"Review Management</h3>
+                        <h3 class="card-title">Review Management</h3>
 
                         <a href="{{ route('review.create') }}" class="btn btn-success btn-sm float-right">
                             <span class="fas fa-plus-circle"></span>
