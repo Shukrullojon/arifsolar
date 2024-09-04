@@ -48,6 +48,8 @@ class ReviewController extends Controller
             'video' => $video ?? "",
             'name' => $request->name,
             'status' => $request->status,
+            'video_alt_uz' => $request->video_alt_uz,
+            'video_alt_ru' => $request->video_alt_ru
         ]);
         return redirect()->route('review.index')->with('success','Review create successfuly');
     }

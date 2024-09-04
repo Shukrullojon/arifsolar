@@ -44,7 +44,7 @@ class WorkController extends Controller
         if ($validated->fails()){
             return back()->withInput()->withErrors($validated);
         }
-        work::create([
+        Work::create([
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'description_uz' => $request->description_uz,

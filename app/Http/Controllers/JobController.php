@@ -67,6 +67,8 @@ class JobController extends Controller
             'width' => $request->width,
             'height' => $request->height,
             'status' => $request->status,
+            'img_alt_uz' => $request->img_alt_uz,
+            'img_alt_ru' => $request->img_alt_ru,
         ]);
         if ($request->hasFile('file')) {
             foreach ($request->file as $f){
