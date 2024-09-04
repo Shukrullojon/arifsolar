@@ -89,6 +89,7 @@ class JobController extends Controller
      */
     public function show(Job $job)
     {
+
         return view('job.show',[
             'job' => $job,
         ]);
@@ -128,8 +129,39 @@ class JobController extends Controller
             $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
             $request->image->move(public_path('files'), $image);
         }
+
+        if ($request->hasFile("image_logo")){
+            $filePath = public_path('files/' . $job->image_logo);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+            $image_logo = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image_logo->getClientOriginalExtension();
+            $request->image_logo->move(public_path('files'), $image_logo);
+        }
+
+        if ($request->hasFile('file')) {
+            $file_db = \App\Models\File::where('model',Job::class)->where('model_id',$job->id)->get();
+            foreach ($file_db as $f_d){
+                $filePath = public_path('files/' . $f_d->file);
+                if (File::exists($filePath)) {
+                    File::delete($filePath);
+                }
+                $f_d->delete();
+            }
+            foreach ($request->file as $f){
+                $file_name = date('Y_m_d_H_i_s').rand(10000, 99999).'.'.$f->getClientOriginalExtension();
+                $f->move(public_path('files'), $file_name);
+                \App\Models\File::create([
+                    'model' => Job::class,
+                    'model_id' => $job->id,
+                    'file' => $file_name,
+                ]);
+            }
+        }
+
         $job->update([
             'image' => $image ?? $job->image,
+            'image_logo' => $image_logo ?? $job->image_logo,
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'address_uz' => $request->address_uz,

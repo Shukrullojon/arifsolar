@@ -16,6 +16,29 @@
                                user="grid" aria-describedby="dataTable_info">
                             <thead>
                             <tr>
+                                <th>Image</th>
+                                <td>
+                                    <img src="{{ asset("public/files/".$job->image) }}" width="200">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Image(Logo)</th>
+                                <td>
+                                    <img src="{{ asset("public/files/".$job->image_logo) }}" width="100">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Modal Images</th>
+                                <td>
+                                    @foreach($job->files as $f)
+                                        <img src="{{ asset("public/files/".$f->file) }}" height="150px" width="150px" style="margin: 5px">
+                                    @endforeach
+                                </td>
+                            </tr>
+
+                            <tr>
                                 <th>Title(uz)</th>
                                 <td>{{ $job->title_uz }}</td>
                             </tr>
@@ -36,6 +59,16 @@
                             </tr>
 
                             <tr>
+                                <th>Description(uz)</th>
+                                <td>{{ $job->description_uz }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Description(ru)</th>
+                                <td>{{ $job->description_ru }}</td>
+                            </tr>
+
+                            <tr>
                                 <th>Width</th>
                                 <td>{{ $job->width }}</td>
                             </tr>
@@ -43,14 +76,6 @@
                             <tr>
                                 <th>Height</th>
                                 <td>{{ $job->height }}</td>
-                            </tr>
-
-
-                            <tr>
-                                <th>Image</th>
-                                <td>
-                                    <img src="{{ asset("public/files/".$job->image) }}" width="200">
-                                </td>
                             </tr>
 
                             <tr>

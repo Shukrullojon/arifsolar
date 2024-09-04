@@ -13,12 +13,32 @@
                         {!! Form::model($job, ['method' => 'PATCH','route' => ['job.update', $job->id], 'enctype' => 'multipart/form-data']) !!}
                         <div class="row">
 
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
-                                    <label for="image"><strong>Image:</strong></label>{!! Form::label('image',"*",['style'=>"color:red"]) !!}<br>
+                                    <label for="image"><strong>Image:</strong></label>
                                     {!! Form::file('image', null, ['autocomplete'=>'OFF','id'=>'image','placeholder' => 'Image','required'=>true,'class' => "form-control ".($errors->has('image') ? 'is-invalid' : '')]) !!}
                                     @if($errors->has('image'))
                                         <span class="error invalid-feedback">{{ $errors->first('image') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="image"><strong>Modal Images:</strong></label>
+                                    <input type="file" name="file[]" multiple="multiple" class="form-control">
+                                    @if($errors->has('file'))
+                                        <span class="error invalid-feedback">{{ $errors->first('file') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="image_logo"><strong>Image Logo:</strong></label>
+                                    {!! Form::file('image_logo', null, ['autocomplete'=>'OFF','id'=>'image_logo','placeholder' => 'Image Logo','class' => "form-control ".($errors->has('image_logo') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('image_logo'))
+                                        <span class="error invalid-feedback">{{ $errors->first('image_logo') }}</span>
                                     @endif
                                 </div>
                             </div>
@@ -59,6 +79,26 @@
                                     {!! Form::text('address_ru', null, ['autocomplete'=>'OFF','id'=>'address_ru','placeholder' => 'Address(ru)','required'=>true,'class' => "form-control ".($errors->has('address_ru') ? 'is-invalid' : '')]) !!}
                                     @if($errors->has('address_ru'))
                                         <span class="error invalid-feedback">{{ $errors->first('address_ru') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="description_uz"><strong>Description(uz):</strong></label>{!! Form::label('description_uz',"*",['style'=>"color:red"]) !!}
+                                    {!! Form::textarea('description_uz', null, ['rows' => 4,'autocomplete'=>'OFF','id'=>'description_uz','placeholder' => 'Description(uz)','required'=>true,'class' => "form-control ".($errors->has('description_uz') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('description_uz'))
+                                        <span class="error invalid-feedback">{{ $errors->first('description_uz') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="description_ru"><strong>Description(ru):</strong></label>{!! Form::label('description_ru',"*",['style'=>"color:red"]) !!}
+                                    {!! Form::textarea('description_ru', null, ['rows' => 4,'autocomplete'=>'OFF','id'=>'description_ru','placeholder' => 'Description(ru)','required'=>true,'class' => "form-control ".($errors->has('description_ru') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('description_ru'))
+                                        <span class="error invalid-feedback">{{ $errors->first('description_ru') }}</span>
                                     @endif
                                 </div>
                             </div>

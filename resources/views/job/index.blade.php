@@ -34,10 +34,7 @@
                                 <th>Title(uz)</th>
                                 <th>Address(uz)</th>
                                 <th>Image</th>
-                                <th>Height</th>
-                                <th>Width</th>
-                                <th>Img Alt(uz)</th>
-                                <th>Img Alt(ru)</th>
+                                <th>Image(Logo)</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -50,10 +47,9 @@
                                     <td>
                                         <img src="{{ asset("public/files/".$job->image) }}" width="100">
                                     </td>
-                                    <td>{!! $job->height !!}</td>
-                                    <td>{!! $job->width !!}</td>
-                                    <td>{!! $job->img_alt_uz !!}</td>
-                                    <td>{!! $job->img_alt_ru !!}</td>
+                                    <td>
+                                        <img src="{{ asset("public/files/".$job->image_logo) }}" width="100">
+                                    </td>
                                     <td>{{ \App\Models\Job::$statuses[$job->status] }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">
