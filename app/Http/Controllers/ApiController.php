@@ -43,5 +43,8 @@ class ApiController extends Controller
             'chat_id' => -1002237430774,
             'text' => $text,
         ]);
+        return response()->json([
+            'status' => true
+        ]);
     }
 }
