@@ -25,6 +25,9 @@ class JobSeeder extends Seeder
                 'width' => 111,
                 'height' => 85,
                 'status' => 1,
+                'image_logo' => "mb-white-icon.svg",
+                "img_alt_uz" => "Qwerty",
+                "img_alt_ru" => "Qwerty",
             ],
             [
                 'image' => "mb-white-icon.svg",
@@ -37,6 +40,9 @@ class JobSeeder extends Seeder
                 'width' => 111,
                 'height' => 85,
                 'status' => 1,
+                'image_logo' => "mb-white-icon.svg",
+                "img_alt_uz" => "Qwerty",
+                "img_alt_ru" => "Qwerty",
             ],
         ];
         foreach ($datas as $data){

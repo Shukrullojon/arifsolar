@@ -1,0 +1,16 @@
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.close-modal-btn:hover {
+    color: #ff0000; /* Optional, for hover effect */
+}

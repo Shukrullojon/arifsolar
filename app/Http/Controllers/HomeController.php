@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Comment;
 use App\Models\Consultation;
+use App\Models\Header;
 use App\Models\Job;
 use App\Models\News;
 use App\Models\Partner;
@@ -12,6 +13,7 @@ use App\Models\Question;
 use App\Models\Review;
 use App\Models\Work;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Revolution\Google\Sheets\Facades\Sheets;
 
 class HomeController extends Controller
@@ -50,16 +52,18 @@ class HomeController extends Controller
     {
         $locale = $request->session()->get('locale');
         $locale = $locale ?: "uz";
-        $about = About::select("video","image","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->first();
-        $works = Work::select("title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
-        $reviews = Review::select("video","name")->where('status',1)->latest()->get();
-        $comments = Comment::select("comment_$locale as comment", "fio", "company")->where('status',1)->latest()->get();
-        $news = News::select("image","title_$locale as title", "description_$locale as description","created_at")->where('status',1)->latest()->get();
-        $partners = Partner::select("link")->where('status',1)->latest()->get();
-        $questions = Question::select("title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
-        $jobs = Job::select("image","title_$locale as title", "description_$locale as description", "address_$locale as address","width","height","status")->where('status',1)->latest()->get();
-        $consultations = Consultation::select("title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
+        $header = Header::select("id","title_$locale as title", "button_title_$locale as button_title", "section_id")->where('status',1)->latest()->first();
+        $about = About::select("id","video","image","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->first();
+        $works = Work::select("id","image","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
+        $reviews = Review::select("id","video","name")->where('status',1)->latest()->get();
+        $comments = Comment::select("id","comment_$locale as comment", "fio", "company")->where('status',1)->latest()->get();
+        $news = News::select("id","img_alt_$locale as img_alt","created_at","image","title_$locale as title", "description_$locale as description","created_at")->where('status',1)->latest()->get();
+        $partners = Partner::select("id","image")->where('status',1)->latest()->get();
+        $questions = Question::select("id","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
+        $jobs = Job::select("id", "img_alt_$locale as img_alt","image","image_logo","title_$locale as title", "description_$locale as description", "address_$locale as address","width","height","status")->where('status',1)->latest()->get();
+        $consultations = Consultation::select("id","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
         return view('home',[
+            'header' => $header,
             'about' => $about,
             'works' => $works,
             'reviews' => $reviews,
@@ -70,6 +74,18 @@ class HomeController extends Controller
             'jobs' => $jobs,
             'consultations' => $consultations,
         ]);
+    }
+
+    public function notification(Request $request)
+    {
+        $token = "7018480396:AAEWyViLNtIsr_R5ZQQiPGWTFDhSLZLCKZg";
+        $text = "FIO: ".$request->name."\n";
+        $text .= "PHONE: ".$request->phone."\n";
+        Http::post("https://api.telegram.org/bot$token/sendMessage",[
+            'chat_id' => -1002237430774,
+            'text' => $text,
+        ]);
+        return redirect()->back()->with("success","hello");
     }
 
     public function main()

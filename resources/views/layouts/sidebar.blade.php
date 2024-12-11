@@ -14,6 +14,12 @@
                         <p>Home</p>
                     </a>
                 </li>--}}
+                <li class="nav-item">
+                    <a href="{{ route('header.index') }}" class="nav-link {{ Request::is('admin/header*') ? "active":'' }}">
+                        <i class="fa fa-head-side-virus"></i>
+                        <p>Headers</p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{ route('about.index') }}" class="nav-link {{ Request::is('admin/about*') ? "active":'' }}">

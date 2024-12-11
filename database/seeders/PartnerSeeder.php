@@ -16,52 +16,52 @@ class PartnerSeeder extends Seeder
         $datas = [
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
             [
                 "name" => "abc",
-                'link' => "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
+                'image' => "3.png",
                 'status' => 1,
             ],
         ];

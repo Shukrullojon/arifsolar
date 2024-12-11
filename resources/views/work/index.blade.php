@@ -33,6 +33,7 @@
                             <tr>
                                 <th>Title(uz)</th>
                                 <th>Descrition(uz)</th>
+                                <th>Image</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -42,6 +43,9 @@
                                 <tr>
                                     <td>{{ $work->title_uz }}</td>
                                     <td>{!! $work->description_uz !!}</td>
+                                    <td>
+                                        <img src="{{ asset("public/files/".$work->image) }}" width="100">
+                                    </td>
                                     <td>{{ \App\Models\Work::$statuses[$work->status] }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">

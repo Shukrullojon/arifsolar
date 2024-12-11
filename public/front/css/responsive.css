@@ -1,0 +1,2608 @@
+@media only screen and (max-width: 1100px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 660px;
+        justify-content: space-between;
+    }
+
+    .header-left-line{
+        display: flex;
+        width: 1px;
+        background: white;
+        border: 1px;
+        height: 50px;
+    }
+
+    .header-left-title{
+        margin: 0;
+        padding: 0;
+        color: white;
+        max-width: 280px;
+        line-height: 22px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin-left: 50%;
+        padding: 24px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        padding-top: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    #ourJobsItem4{
+        width: 960px;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+        width: 800px;
+    }
+
+    #carousel-vp2{
+        width: 900px;
+    }
+
+    #carousel-vp3{
+        width: 800px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 400px;
+    }
+
+    .questions-item-active{
+        max-width: 400px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 1000px;
+    }
+  }
+  @media only screen and (max-width: 980px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 350px;
+        justify-content: space-between;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin-left: 50%;
+        padding: 24px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        padding-top: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+        width: 800px;
+    }
+
+    #carousel-vp2{
+        width: 900px;
+    }
+
+    #carousel-vp3{
+        width: 800px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 400px;
+    }
+
+    .questions-item-active{
+        max-width: 400px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 900px;
+    }
+  }
+  @media only screen and (max-width: 958px) {
+
+    #ourJobsItem2, #ourJobsItem3{
+        width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 920px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 350px;
+        justify-content: space-between;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 24px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+        width: 800px;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 800px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 400px;
+    }
+
+    .questions-item-active{
+        max-width: 400px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 800px;
+        /* width: 100%; */
+        box-sizing: border-box;
+    }
+  }
+  @media only screen and (max-width: 830px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 350px;
+        justify-content: space-between;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 24px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 770px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between;
+        gap: 20px !important;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 400px;
+    }
+
+    .questions-item-active{
+        max-width: 400px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 750px;
+        /* width: 100%; */
+        box-sizing: border-box;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 350px;
+        justify-content: space-between;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 24px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 760px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 30px !important;
+    }
+    .cCarousel-item{
+        width: 363px;
+        height: 470px;
+    }
+    .cCarousel-item > video{
+        width: 363px;
+        height: 470px;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 300px;
+    }
+
+    .questions-item-active{
+        max-width: 300px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 750px;
+        /* width: 100%; */
+        box-sizing: border-box;
+    }
+  }
+  @media only screen and (max-width: 780px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 350px;
+        justify-content: space-between;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 24px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 735px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 30px !important;
+    }
+    .cCarousel-item{
+        width: 350px;
+        height: 450px;
+    }
+    .cCarousel-item > video{
+        width: 363px;
+        height: 470px;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 300px;
+    }
+
+    .questions-item-active{
+        max-width: 300px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 750px;
+        /* width: 100%; */
+        box-sizing: border-box;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 350px;
+        justify-content: space-between;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 24px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 700px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 30px !important;
+    }
+    .cCarousel-item{
+        width: 332px;
+        height: 420px;
+    }
+    .cCarousel-item > video{
+        width: 332px;
+        height: 420px;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 300px;
+    }
+
+    .questions-item-active{
+        max-width: 300px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 700px;
+        /* width: 100%; */
+        box-sizing: border-box;
+    }
+  }
+  @media only screen and (max-width: 715px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 670px;
+       height: 410px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 410px !important;
+    }
+    .cCarousel-item{
+        width: 330px;
+        height: 410px;
+    }
+    .cCarousel-item > video{
+        width: 330px;
+        height: 410px;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 300px;
+    }
+
+    .questions-item-active{
+        max-width: 300px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 670px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+  }
+  @media only screen and (max-width: 690px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 600px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 400px;
+       height: 490px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 490px !important;
+    }
+    .cCarousel-item{
+        width: 400px;
+        height: 490px;
+    }
+    .cCarousel-item > video{
+        width: 400px;
+        height: 490px;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        justify-content: space-around;
+    }
+
+    .questions-item{
+        max-width: 300px;
+    }
+
+    .questions-item-active{
+        max-width: 300px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-contact{
+        width: 616px;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 650px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 600px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 400px;
+       height: 490px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 490px !important;
+    }
+    .cCarousel-item{
+        width: 400px;
+        height: 490px;
+    }
+    .cCarousel-item > video{
+        width: 400px;
+        height: 490px;
+    }
+
+    #carousel-vp2{
+        width: 600px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        width: 100%;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .questions-item{
+        max-width: 600px;
+        width: 100% !important;
+    }
+
+    .questions-item-active{
+        max-width: 600px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-carousel-box{
+        width: 500px;
+    }
+    .free-tial-item-desc{
+        width: 100%;
+    }
+    .card{
+        width: 436px;
+    }
+    .map{
+        margin-top: 15%;
+    }
+    .free-tial-contact{
+        width: 500px;
+        height: 100%;
+    }
+    .free-tial-contact-input{
+        margin-bottom: 30px !important;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 600px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .about-video{
+        width: 550px;
+        height: 400px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 600px;
+        text-align: center;
+        /* width: 100%; */
+        line-height: 40px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #080038;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 400px;
+       height: 490px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 490px !important;
+    }
+    .cCarousel-item{
+        width: 400px;
+        height: 490px;
+    }
+    .cCarousel-item > video{
+        width: 400px;
+        height: 490px;
+    }
+
+    #carousel-vp2{
+        width: 300px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        width: 100%;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .questions-item{
+        max-width: 600px;
+        width: 100% !important;
+    }
+
+    .questions-item-active{
+        max-width: 600px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-carousel-box{
+        width: 500px;
+    }
+    .free-tial-item-desc{
+        width: 100%;
+    }
+    .card{
+        width: 436px;
+    }
+    .map{
+        margin-top: 15%;
+    }
+    .free-tial-contact{
+        width: 500px;
+        height: 100%;
+    }
+    .free-tial-contact-input{
+        margin-bottom: 30px !important;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 550px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .about-video{
+        width: 500px;
+        height: 350px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 500px;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 400px;
+       height: 490px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 490px !important;
+    }
+    .cCarousel-item{
+        width: 400px;
+        height: 490px;
+    }
+    .cCarousel-item > video{
+        width: 400px;
+        height: 490px;
+    }
+
+    #carousel-vp2{
+        width: 300px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        width: 100%;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .questions-item{
+        max-width: 600px;
+        width: 100% !important;
+    }
+
+    .questions-item-active{
+        max-width: 600px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-carousel-box{
+        width: 500px;
+    }
+    .free-tial-item-desc{
+        width: 100%;
+    }
+    .card{
+        width: 436px;
+    }
+    .map{
+        margin-top: 15%;
+    }
+    .free-tial-contact{
+        width: 500px;
+        height: 100%;
+    }
+    .free-tial-contact-input{
+        margin-bottom: 30px !important;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 500px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .about-video{
+        width: 400px;
+        height: 250px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 500px;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 400px;
+       height: 410px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 410px !important;
+    }
+    .cCarousel-item{
+        width: 400px;
+        height: 410px;
+    }
+    .cCarousel-item > video{
+        width: 400px;
+        height: 410px;
+    }
+
+    #carousel-vp2{
+        width: 300px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        width: 100%;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .questions-item{
+        max-width: 600px;
+        width: 100% !important;
+    }
+
+    .questions-item-active{
+        max-width: 600px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-carousel-box{
+        width: 450px;
+    }
+    .free-tial-item-desc{
+        width: 100%;
+    }
+    .card{
+        width: 436px;
+    }
+    .map{
+        margin-top: 15%;
+    }
+    .free-tial-contact{
+        width: 450px;
+        height: 100%;
+    }
+    .free-tial-contact-input{
+        margin-bottom: 30px !important;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .address-item-desc{
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+    .address-item-desc > span{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 450px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .work-title, .about-title, .our-jobs-item-title{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .our-jobs-item-desc{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+        max-width: 400px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .about-video{
+        width: 400px;
+        height: 250px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 500px;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 400px;
+       height: 410px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 410px !important;
+    }
+    .cCarousel-item{
+        width: 400px;
+        height: 410px;
+    }
+    .cCarousel-item > video{
+        width: 400px;
+        height: 410px;
+    }
+
+    #carousel-vp2{
+        width: 300px;
+    }
+
+    #carousel-vp3{
+        width: 400px;
+    }
+
+    .questions-list{
+        width: 100%;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .questions-item{
+        max-width: 600px;
+        width: 100% !important;
+    }
+
+    .questions-item-active{
+        max-width: 600px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-carousel-box{
+        padding: 40px 20px;
+        width: 400px;
+    }
+    .free-tial-item-desc{
+        width: 100%;
+    }
+    .card{
+        width: 320px;
+    }
+    .free-tial-item-title, .free-tial-contact-title{
+        font-size: 25px;
+        line-height: 28px;
+    }
+    .map{
+        margin-top: 15%;
+    }
+    .free-tial-contact{
+        width: 400px;
+        height: 100%;
+    }
+    .free-tial-contact-input{
+        margin-bottom: 20px !important;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .address-item-desc{
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+    .address-item-desc > span{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+    .arrow{
+        width: 50px;
+        height: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+
+    .container{
+        max-width: 1000px;
+    }
+    .work-title, .about-title, .our-jobs-item-title, .our-jobs-btn{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .our-jobs-item-desc{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-left-box{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+    .header-left-box > img {
+        width: 270px;
+        height: 48px;
+    }
+
+    .header-rigt-box{
+        display: none;
+        /* content: none; */
+    }
+
+    .header-tell-img{
+        display: flex;
+    }
+
+
+    .header-left-title{
+       display: none;
+    }
+    .hero-box{
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgb(124,212,217);
+        background: linear-gradient(135deg, rgba(124,212,217,1) 0%, rgba(0,160,168,1) 100%);
+        border-radius: 32px;
+        max-width: 350px;
+    }
+    .hero-name-input, .hero-tel-input{
+        width: 310px;
+    }
+    .hero-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        /* max-width: 300px; */
+        /* text-align: center; */
+    }
+    .hero-desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .about-video{
+        width: 350px;
+        height: 250px;
+    }
+
+    .about-desc{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .about-box-desc{
+        margin: 0;
+        padding: 0;
+        max-width: 500px;
+    }
+    .our-jobs-item{
+        height: 500px;
+    }
+    .our-jobs-item > img:nth-child(2){
+        width: 60px;
+        height: 60px;
+    }
+    .hero{
+        /* padding-top: 60px */
+        padding: 30px 0;
+    }
+    .hero-btn{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #ourJobsItem1, #ourJobsItem4, .our-jobs-item-btn{
+        width: 100%;
+    }
+    /* #ourJobsItem4{
+        max-width: 937px;
+    } */
+    #jobsItem{
+        width: 100%;
+    }
+
+    .work-list{
+        justify-content: space-around;
+    }
+
+    #carousel-vp{
+       width: 300px;
+       height: 350px;
+    }
+    #cCarousel-inner{
+        justify-content: space-between !important;
+        gap: 10px !important;
+       height: 350px !important;
+    }
+    .cCarousel-item{
+        width: 300px;
+        height: 350px;
+    }
+    .cCarousel-item3{
+        width: 300px;
+        height: 350px;
+    }
+    .cCarousel-item > video{
+        width: 300px;
+        height: 350px;
+    }
+
+    #carousel-vp2{
+        width: 300px;
+    }
+
+    #carousel-vp3{
+        width: 300px;
+    }
+    .news-item-title{
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    .news-item-desc{
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    .news-item-img{
+        width: 300px;
+    }
+
+    .questions-list{
+        width: 100%;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .questions-item{
+        max-width: 600px;
+        width: 100% !important;
+    }
+
+    .questions-item-active{
+        max-width: 600px;
+    }
+
+    .free-tial-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .free-tial-carousel-box{
+        padding: 20px 20px;
+        width: 350px;
+    }
+    .free-tial-item-desc{
+        width: 100%;
+    }
+    .card{
+        width: 320px;
+    }
+    .free-tial-item-title, .free-tial-contact-title{
+        font-size: 25px;
+        line-height: 28px;
+    }
+    .map{
+        margin-top: 15%;
+    }
+    .free-tial-contact{
+        width: 350px;
+        height: 100%;
+    }
+    .free-tial-contact-input{
+        margin-bottom: 20px !important;
+    }
+    .first, .second, .third{
+        width: 60px !important;
+    }
+    .address-box{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .address-box > iframe {
+        width: 100%;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .address-item > img{
+        width: 50px;
+        height: 50px;
+    }
+    .address-item-desc{
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+    .address-item-desc > span{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    /* .free-tial-carousel-box{
+        width: 500px;
+        box-sizing: border-box;
+    } */
+
+    /* .card{
+        width: 390px;
+    } */
+
+    .slider{
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+    .hamburger-btn{
+        display: flex;
+    }
+    .our-jobs-item-btn{
+        font-size: 24px;
+        line-height: 28px;
+        padding: 10px 0px;
+    }
+    .arrow{
+        width: 50px;
+        height: 50px;
+    }
+    .footer-title{
+        font-size: 16px;
+        line-height: 20px;
+    }
+  }

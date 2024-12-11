@@ -11,52 +11,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset("a/css/carousel.css")}}">
-    <link rel="stylesheet" href="{{ asset("a/css/main.css")}}">
-    <link rel="stylesheet" href="{{ asset("a/css/responsive.css")}}">
+    <link rel="stylesheet" href="{{ asset("front/css/carousel.css")}}">
+    <link rel="stylesheet" href="{{ asset("front/css/main.css")}}">
+    <link rel="stylesheet" href="{{ asset("front/css/responsive.css")}}">
+    <link rel="stylesheet" href="{{ asset("front/css/new.css")}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <title>Arif Solar</title>
 </head>
 <body>
-<section class="header-top" id="header-top">
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-        <h1 class="header-top-title">@lang('front.info_header')</h1>
-        <button class="header-top-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="16" fill="white" fill-opacity="0.4"/>
-                <path
-                    d="M21.8242 20.9752C21.8799 21.031 21.9241 21.0971 21.9543 21.17C21.9845 21.2428 22 21.3209 22 21.3997C22 21.4785 21.9845 21.5566 21.9543 21.6294C21.9241 21.7023 21.8799 21.7684 21.8242 21.8242C21.7684 21.8799 21.7023 21.9241 21.6294 21.9543C21.5566 21.9845 21.4785 22 21.3997 22C21.3209 22 21.2428 21.9845 21.17 21.9543C21.0971 21.9241 21.031 21.8799 20.9752 21.8242L16 16.8482L11.0248 21.8242C10.9122 21.9368 10.7595 22 10.6003 22C10.4411 22 10.2884 21.9368 10.1758 21.8242C10.0632 21.7116 10 21.5589 10 21.3997C10 21.2405 10.0632 21.0878 10.1758 20.9752L15.1518 16L10.1758 11.0248C10.0632 10.9122 10 10.7595 10 10.6003C10 10.4411 10.0632 10.2884 10.1758 10.1758C10.2884 10.0632 10.4411 10 10.6003 10C10.7595 10 10.9122 10.0632 11.0248 10.1758L16 15.1518L20.9752 10.1758C21.0878 10.0632 21.2405 10 21.3997 10C21.5589 10 21.7116 10.0632 21.8242 10.1758C21.9368 10.2884 22 10.4411 22 10.6003C22 10.7595 21.9368 10.9122 21.8242 11.0248L16.8482 16L21.8242 20.9752Z"
-                    fill="white"/>
-            </svg>
-        </button>
-    </div>
-</section>
+
+@if(!empty($header))
+    <section class="header-top" id="header-top">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex">
+                <h1 class="header-top-title">{!! $header->title !!}</h1>
+                <a class="header_button" style="margin-left: 5px"
+                   href="#{{ $header->section_id }}">{{ $header->button_title }}</a>
+            </div>
+            <div>
+                <button class="header-top-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="16" fill="white" fill-opacity="0.4"/>
+                        <path
+                            d="M21.8242 20.9752C21.8799 21.031 21.9241 21.0971 21.9543 21.17C21.9845 21.2428 22 21.3209 22 21.3997C22 21.4785 21.9845 21.5566 21.9543 21.6294C21.9241 21.7023 21.8799 21.7684 21.8242 21.8242C21.7684 21.8799 21.7023 21.9241 21.6294 21.9543C21.5566 21.9845 21.4785 22 21.3997 22C21.3209 22 21.2428 21.9845 21.17 21.9543C21.0971 21.9241 21.031 21.8799 20.9752 21.8242L16 16.8482L11.0248 21.8242C10.9122 21.9368 10.7595 22 10.6003 22C10.4411 22 10.2884 21.9368 10.1758 21.8242C10.0632 21.7116 10 21.5589 10 21.3997C10 21.2405 10.0632 21.0878 10.1758 20.9752L15.1518 16L10.1758 11.0248C10.0632 10.9122 10 10.7595 10 10.6003C10 10.4411 10.0632 10.2884 10.1758 10.1758C10.2884 10.0632 10.4411 10 10.6003 10C10.7595 10 10.9122 10.0632 11.0248 10.1758L16 15.1518L20.9752 10.1758C21.0878 10.0632 21.2405 10 21.3997 10C21.5589 10 21.7116 10.0632 21.8242 10.1758C21.9368 10.2884 22 10.4411 22 10.6003C22 10.7595 21.9368 10.9122 21.8242 11.0248L16.8482 16L21.8242 20.9752Z"
+                            fill="white"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+@endif
+
 
 <section class="header-hero-section">
     <header>
         <div class="container header-container">
-            <div class="header-left-box">
-                <img src="{{ asset("a/images/Logo-1.svg")}}" alt="logo" width="305" height="58">
+            <a href="" class="header-left-box">
+                <img src="{{ asset("front/images/Logo-1.svg")}}" alt="logo" width="305" height="58">
                 <span class="header-left-line"></span>
                 <h3 class="header-left-title">@lang('front.logo_1') <br>@lang('front.logo_2')</h3>
-            </div>
+            </a>
             <div class="header-rigt-box">
                 <a href="tel:712030056" class="header-tell">
-                    <img class="header-tell-img" src="{{ asset("a/images/phone-vector.svg")}}" alt="phone" width="24"
+                    <img class="header-tell-img" src="{{ asset("front/images/phone-vector.svg")}}" alt="phone"
+                         width="24"
                          height="24">
                     71 203 00 56
                 </a>
                 <span class="header-left-line"></span>
-                <a class="header-telegram-icon" href="https://t.me/solarzoneuz">
-                    <img src="{{ asset("a/images/telegram-icon.svg")}}" alt="telegram" width="44" height="44">
+                <a class="header-telegram-icon" href="https://t.me/arifsolar">
+                    <img src="{{ asset("front/images/telegram-icon.svg")}}" alt="telegram" width="44" height="44">
                 </a>
                 <span class="header-left-line"></span>
                 @php
                     $lang = App::getLocale('locale') == "uz" ? "ru" : "uz";
-                    $img = App::getLocale('locale') == "uz" ? "lang-icon2.svg.svg" : "lang_icon_uz.svg";
+                    $img = App::getLocale('locale') == "uz" ? "lang_icon_uz.svg" : "lang-icon.svg";
                 @endphp
                 <a href="{{ route("language",$lang) }}">
                     <button class="header-lang-icon">
-                        <img src="{{ asset("arifsolar/images/$img") }}" alt="telegram" width="44" height="44">
+                        <img src="{{ asset("front/images/$img") }}" alt="telegram" width="44" height="44">
                     </button>
                 </a>
             </div>
@@ -72,10 +85,13 @@
             <p class="hero-desc">
                 @lang('front.hero_desc')
             </p>
-            <form class="hero-form" id="hero-form" action="" method="get" enctype="text/plain" autocomplete="off">
+            <form class="hero-form" id="hero-form" action="{{ route("notification") }}" method="POST">
+                @csrf
                 <input class="hero-name-input" name="name" type="text" placeholder="@lang('front.name')" required>
-                <input class="hero-tel-input" name="phone" type="tel" value="+998" placeholder="+998 99 -000-00-00" required>
-                <button class="hero-btn" name="submit_form" type="submit" id="hero-btn">@lang('front.button_submit')<span class="hero-btn-icon"></span></button>
+                <input class="hero-tel-input" name="phone" type="tel" value="+998" placeholder="+998 99 -000-00-00"
+                       required>
+                <button class="hero-btn" name="submit_form" type="submit" id="hero-btn">@lang('front.button_submit')
+                    <span class="hero-btn-icon"></span></button>
             </form>
         </div>
     </div>
@@ -84,26 +100,25 @@
 <main>
 
     @if(!empty($about))
-        <section class="about">
+        <section class="about" id="about_section">
             <div class="container about-container">
                 <div class="about-title-box">
                     <span class="about-title-line"></span>
                     <h3 class="about-title">@lang('front.about')</h3>
                 </div>
                 <div class="about-desc">
-                    <div class="about-video">
-                        <video class="about-video" id="aboutVideo">
+                    <div class="about-video" id="about_video">
+                        <video class="about-video" id="aboutVideoNew">
                             <source src="{{ asset("public/files/".$about->video)}}" type="video/mp4">
                             <source src="{{ asset("public/files/".$about->video)}}" type="video/mp4">
-
                         </video>
-                        <button class="about-video-btn" id="aboutVideoBtn">
+                        <button class="about-video-btn" id="aboutVideoBtnNew">
                             <img src="{{ asset("public/files/".$about->image)}}" alt="play" width="100" height="100">
                         </button>
                     </div>
                     <p class="about-box-desc">
                         <span class="about-box-desc-span">{{ $about->title }}</span>
-                        <br> {{ $about->description }}
+                        <br> {!! $about->description !!}
                     </p>
                 </div>
             </div>
@@ -111,7 +126,7 @@
     @endif
 
     @if(count($works))
-        <section class="work">
+        <section class="work" id="work_section">
             <div class="container work-container">
                 <div class="work-title-box">
                     <span class="about-title-line"></span>
@@ -120,7 +135,9 @@
                 </div>
                 <ul class="work-list">
                     @foreach($works as $work)
-                        <li class="work-item">
+                        <li class="work-item"
+                            style="background-image: url('{{ asset('public/files/'.$work->image) }}');"
+                            data-hover-image="{{ asset('public/files/'.$work->image) }}">
                             <h4 class="work-item-title">{{ $work->title }}</h4>
                             <p class="work-item-desc">{{ $work->description }}</p>
                         </li>
@@ -131,7 +148,7 @@
     @endif
 
     @if(count($jobs))
-        <section class="our-jobs">
+        <section class="our-jobs" id="job_section">
             <div class="container">
                 <div
                     style=" margin: 0px; margin-bottom: 64px; display: flex; align-items: center; justify-content: space-between;">
@@ -141,66 +158,60 @@
                     </div>
                 </div>
                 <ul class="our-jobs-list">
-                    <li class="our-jobs-item" id="ourJobsItem1">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem2">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem3">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
+                    @foreach($jobs as $job)
+                        <li class="our-jobs-item newOurJob"
+                            style="background-image: url('{{ asset('public/files/'.$job->image) }}');"
+                            data-job-id="{{ $job->id }}">
+                            <img style="margin-bottom: 26px;" src="{{ asset("public/files/".$job->image_logo) }}"
+                                 alt="{{ $job->img_alt }}" width="{{ $job->width }}" height="{{ $job->height }}">
+                            <h3 class="our-jobs-item-title">{{ $job->title }}</h3>
+                            <p class="our-jobs-item-desc">{{ $job->address }}</p>
+                        </li>
 
-                    <li id="jobsItem">
-                        <div class="our-jobs-item our-jobs-item-box" id="ourJobsItem4">
-                            <img style=" margin-bottom: 4px;" src="./images/murad-building-icon.svg" alt="icon"
-                                 width="88" height="74">
-                            <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                            <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
+                        <div class="our-work-modal hidden" id="ourWorkModal_{{ $job->id }}">
+                            <div class="modal">
+                                <div class="modal-box">
+                                    <!-- Close Button (X) -->
+                                    <button class="close-modal-btn" data-modal-id="ourWorkModal_{{ $job->id }}">X
+                                    </button>
+                                    <div class="modal-carousel-box">
+                                        <div class="center modal-center">
+                                            <div class="wrapper modal-wrapper">
+                                                <div class="inner modal-inner" id="modalInner_{{ $job->id }}">
+                                                    @foreach($job->files as $file)
+                                                        <div class="card modal-card">
+                                                            <div class="content modal-content">
+                                                                <img src="{{ asset('public/files/'.$file->file) }}"
+                                                                     alt="arif solar" width="562" height="480">
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="map modal-map" id="modalMap_{{ $job->id }}">
+                                            @foreach ($job->files as $key => $file)
+                                                <button class="{{ $loop->first ? 'active' : '' }}"
+                                                        data-index="{{ $key }}"></button>
+                                            @endforeach
+                                        </div>
+                                    </div>
+
+                                    <p class="modal-desc">
+                                        {!! $job->description !!}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="overlay" id="modalOverlay_{{ $job->id }}"></div>
                         </div>
-                        <button class="our-jobs-item-btn">Ещё</button>
-                    </li>
-
-                    <li class="our-jobs-item" id="ourJobsItem5">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem6">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem7">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
-                    <li class="our-jobs-item" id="ourJobsItem8">
-                        <img style="margin-bottom: 26px;" src="./images/mb-white-icon.svg" alt="icon" width="111"
-                             height="85">
-                        <h3 class="our-jobs-item-title">Murad Buildings -1000</h3>
-                        <p class="our-jobs-item-desc">Tashkent, Uzbekistan</p>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </section>
     @endif
 
     @if(count($reviews))
-        <section class="about-customer">
+        <section class="about-customer" id="review_section">
             <div class="container">
                 <div style="display: flex; align-items: center; justify-content: space-between;  margin-bottom: 48px;">
                     <div class="work-title-box about-customer-title-box">
@@ -223,7 +234,8 @@
                                         <video style="object-fit: cover;" id="aboutCustomerVideo{{ $m }}">
                                             <source src="{{ asset("public/files/".$review->video)}}" type="video/mp4">
                                         </video>
-                                        <button class="about-customr-video-play" id="aboutCustomerVideoBtn{{ $m++ }}">
+                                        <button class="about-customr-video-play aboutCustomerVideoBtnNew"
+                                                button-id="{{ $m++ }}">
                                             <svg class="about-customr-video-play-img" width="72" height="72"
                                                  viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -246,7 +258,7 @@
     @endif
 
     @if(count($comments))
-        <section class="customer-opinion about-customer">
+        <section class="customer-opinion about-customer" id="comment_section">
             <div class="container">
                 <div style="display: flex; align-items: center; justify-content: space-between;  margin-bottom: 48px;">
                     <div class="work-title-box about-customer-title-box">
@@ -266,13 +278,13 @@
                                 @foreach($comments as $comment)
                                     <article class="cCarousel-item2">
                                         <p class="customer-opinion-item-desc">
-                                            {{ $comment->comment }}
+                                            {!! $comment->comment !!}
                                         </p>
                                         <a class="customer-opinion-item-link"></a>
                                         <span class="customer-opinion-item-line"></span>
                                         <div class="customer-opinion-item-box"
                                              style="display: flex; align-items: center; gap: 8px; margin-top: 23px;">
-                                            <img src="{{ asset("arifsolar/images/vector-person.svg")}}" alt="vector">
+                                            <img src="{{ asset("public/files/vector-person.svg")}}" alt="vector">
                                             <h5 class="customer-opinion-box-title">{{ $comment->fio }} <br> <span style="margin: 0;
                                     padding: 0; font-size: 10px; line-height: 14px; color: #00A0A8;">{{ $comment->company }}</span>
                                             </h5>
@@ -288,7 +300,7 @@
     @endif
 
     @if(count($news))
-        <section class="news about-customer">
+        <section class="news about-customer" id="news_section">
             <div class="container">
                 <div style="display: flex; align-items: center; justify-content: space-between;  margin-bottom: 48px;">
                     <div class="work-title-box about-customer-title-box">
@@ -304,20 +316,61 @@
                     <div id="cCarousel">
                         <div id="carousel-vp3">
                             <div id="cCarousel-inner3">
-                                @php $n = 1; @endphp
                                 @foreach($news as $new)
                                     <article class="cCarousel-item3">
                                         <img class="news-item-img" src="{{ asset("public/files/".$new->image)}}"
-                                             alt="img" width="386" height="220" style="margin-bottom: 28px;">
+                                             alt="{{ $new->img_alt }}" width="386" height="220"
+                                             style="margin-bottom: 28px;">
                                         <h4 class="news-item-title">{{ $new->title }}</h4>
-                                        <p class="news-item-desc">{{ $new->description }}</p>
-
+                                        <p class="news-item-desc"> {!! substr($new->description,0,150) !!} ...</p>
                                         <div
                                             style="display: flex; align-items: center; justify-content: space-between; margin: 0 16px;">
-                                            <p class="news-item-box-date">25-may, 2025</p>
-                                            <a class="news-item-box-link" id="newsItemBoxLink{{ $n++ }}">Batafsil</a>
+                                            <p class="news-item-box-date">{{ \Carbon\Carbon::parse($new->created_at)->locale('en')->translatedFormat('d-M, Y') }}</p>
+                                            <a class="news-item-box-link OurNews" id="newsItemBoxLink"
+                                               data-new-id="{{ $new->id }}">Batafsil</a>
                                         </div>
                                     </article>
+
+                                    <div class="our-news-modal hidden" id="ourNewsModal_{{ $new->id }}">
+                                        <div class="modal">
+                                            <div class="modal-box">
+                                                <!-- Close Button (X) -->
+                                                <button class="close-modal-btn"
+                                                        data-modal-id="ourNewModal_{{ $new->id }}">X
+                                                </button>
+                                                <div class="modal-carousel-box">
+                                                    <div class="center modal-center">
+                                                        <div class="wrapper modal-wrapper">
+                                                            <div class="inner modal-inner"
+                                                                 id="modalInnerNews_{{ $new->id }}">
+                                                                @foreach($new->files as $file)
+                                                                    <div class="card modal-card">
+                                                                        <div class="content modal-content">
+                                                                            <img
+                                                                                src="{{ asset('public/files/'.$file->file) }}"
+                                                                                alt="img" width="562" height="480">
+                                                                        </div>
+                                                                    </div>
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="map modal-map modal-map-news"
+                                                         id="modalMapNews_{{ $new->id }}">
+                                                        @foreach ($new->files as $key => $file)
+                                                            <button class="{{ $loop->first ? 'active' : '' }}"
+                                                                    data-index="{{ $key }}"></button>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+
+                                                <p class="modal-desc">
+                                                    {!! $new->description !!}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="overlay" id="modalOverlay_{{ $job->id }}"></div>
+                                    </div>
                                 @endforeach
                             </div>
                         </div>
@@ -328,7 +381,7 @@
     @endif
 
     @if(count($consultations))
-        <section class="free-tial-section about-customer">
+        <section class="free-tial-section about-customer" id="consultation_section">
             <div class="container">
                 <div style="  margin-bottom: 64px;">
                     <div class="work-title-box about-customer-title-box">
@@ -343,7 +396,7 @@
                             <div class="wrapper">
                                 <div class="inner">
                                     @foreach($consultations as $consultation)
-                                        <div class="card">
+                                        <div class="card" id="innerConsultation_{{ $consultation->id }}">
                                             <div class="content">
                                                 <h1 class="free-tial-item-title">{{ $consultation->title }}</h1>
                                                 <p class="free-tial-item-desc">{!! $consultation->description !!}</p>
@@ -354,21 +407,23 @@
                             </div>
                         </div>
                         <div class="map">
-                            <button class="active first"></button>
-                            <button class="second"></button>
-                            <button class="third"></button>
+                            @foreach ($consultations as $key => $consultation)
+                                <button class="consultation_map {{ $loop->first ? 'active' : '' }}"
+                                        data-index="{{ $key }}"
+                                        id="modalMapConsultation_{{ $consultation->id }}"></button>
+                            @endforeach
                         </div>
                     </div>
                     <div class="free-tial-contact">
                         <h3 class="free-tial-contact-title">@lang("front.consul_title") @lang("front.consul_title_1")</h3>
                         <p class="free-tial-contact-desc">@lang("front.consult_info")</p>
-                        <form id="freeTialContactForm" action="mailto:arial.uz@gmail.com" method="post"
-                              enctype="text/plain" autocomplete="off">
+                        <form id="freeTialContactForm" action="{{ route("notification") }}" method="POST">
+                            @csrf
                             <input class="hero-name-input free-tial-contact-input" type="text" name="Name"
                                    placeholder="@lang("front.name")">
                             <input class="hero-tel-input free-tial-contact-input" id="free-tial-tell"
-                                   style="margin-bottom: 58px;" type="tel" name="Phone number"
-                                   placeholder="+998 99 -000-00-00" required value="+998">
+                                   style="margin-bottom: 58px;" type="tel" name="phone" placeholder="+998 99 -000-00-00"
+                                   required value="+998">
                             <button class="free-tial-contact-btn">@lang("front.send_request")</button>
                         </form>
                     </div>
@@ -378,7 +433,7 @@
     @endif
 
     @if(count($partners))
-        <section class="partners about-customer">
+        <section class="partners about-customer" id="partner_section">
             <div class="container">
                 <div style="  margin-bottom: 64px;">
                     <div class="work-title-box about-customer-title-box">
@@ -391,7 +446,8 @@
                     <div class="slide-track">
                         @foreach($partners as $partner)
                             <div class="slide">
-                                <img src="{{ $partner->link }}" height="100" width="250" alt=""/>
+                                <img src="{{ asset("public/files/".$partner->image) }}" height="100" width="250"
+                                     alt=""/>
                             </div>
                         @endforeach
                     </div>
@@ -400,7 +456,7 @@
         </section>
     @endif
 
-    <section class="address about-customer">
+    <section class="address about-customer" id="address_section">
         <div class="container">
             <div style="margin-bottom: 64px;">
                 <div class="work-title-box about-customer-title-box">
@@ -411,34 +467,34 @@
             </div>
             <div class="address-box">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.703328547317!2d69.19133099999999!3d41.269400499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae890022cdc6f7%3A0x62b20f450b1bb224!2sHome%20life%20Climate!5e0!3m2!1sru!2s!4v1718018388958!5m2!1sru!2s"
-                    width="600" height="400" style="border:0; border-radius: 16px;" allowfullscreen=""
-                    loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.522063386615!2d69.21282591025435!3d41.27574107119456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b97917982ad%3A0x75b13338924648ad!2sArif%20Solar%20-%20Quyosh%20panellari!5e0!3m2!1sru!2s!4v1733936264234!5m2!1sru!2s"
+                    width="600" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <ul class="address-list">
                     <li class="address-item">
-                        <img src="{{ asset("arifsolar/images/phone-icon.svg")}}" alt="phone" width="64" height="64">
+                        <img src="{{ asset("front/images/phone-icon.svg")}}" alt="phone" width="64" height="64">
                         <p class="address-item-desc">
                             @lang("front.phone"): <br>
-                            <span>+998 (99) 563 52 35</span>
+                            <span>+998 (71) 203 00 56</span>
                         </p>
                     </li>
                     <li class="address-item">
-                        <img src="{{ asset("arifsolar/images/location-icon.svg")}}" alt="phone" width="64" height="64">
+                        <img src="{{ asset("front/images/location-icon.svg")}}" alt="phone" width="64" height="64">
                         <p class="address-item-desc">
                             @lang("front.add"): <br>
-                            <span>Islom, Karimov 55-A uy, Qarshi</span>
+                            <span>@lang("front.address_tr")</span>
                         </p>
                     </li>
                     <li class="address-item">
-                        <img src="{{ asset("arifsolar/images/mail-icon.svg")}}" alt="mail" width="64" height="64">
+                        <img src="{{ asset("front/images/mail-icon.svg")}}" alt="mail" width="64" height="64">
                         <p class="address-item-desc">
                             @lang("front.email"): <br>
-                            <span>arial.uz@gmail.com</span>
+                            <span>salesuzexim@gmail.com</span><br>
+                            <span>ceo@arif.uz</span>
                         </p>
                     </li>
                     <li class="address-item">
-                        <img src="{{ asset("arifsolar/images/clock-icon.svg")}}" alt="clock" width="64" height="64">
+                        <img src="{{ asset("front/images/clock-icon.svg")}}" alt="clock" width="64" height="64">
                         <p class="address-item-desc">
                             @lang("front.time"):<br>
                             <span>@lang("front.time_info")</span>
@@ -450,7 +506,7 @@
     </section>
 
     @if(count($questions))
-        <section class="questions about-customer">
+        <section class="questions about-customer" id="question_section">
             <div class="container">
                 <div style="  margin-bottom: 64px;">
                     <div class="work-title-box about-customer-title-box">
@@ -461,17 +517,15 @@
 
                 </div>
                 <div class="questions-list">
-                    @php $q = 1; @endphp
                     @foreach($questions as $question)
-                        <div class="questions-item" id="questionsItem{{ $q++ }}">
+                        <div class="questions-item" id="questionsItem_{{ $question->id }}">
                             <div class="questions-item-box">
                                 <h5 class="questions-item-title">{{ $question->title }}</h5>
                                 <button class="questions-item-btn"></button>
                             </div>
                             <p class="questions-item-desc">{{ $question->description }}</p>
                         </div>
-                        @endforeach
-                        </ul>
+                    @endforeach
                 </div>
         </section>
     @endif
@@ -479,81 +533,17 @@
 </main>
 <footer>
     <div class="container">
-        <h3 class="footer-title">@lang('front.reserved') © Aril.uz</h3>
+        <h3 class="footer-title">@lang('front.reserved') © Arifsolar.uz</h3>
     </div>
 </footer>
-
-<div class="our-work-modal hidden" id="ourWorkModal">
-    <div class="modal">
-        <!-- <button class="close-modal">&times;</button> -->
-        <div class="modal-box">
-            <div class="modal-carousel-box">
-                <div class="center modal-center">
-                    <div class="wrapper modal-wrapper">
-                        <div class="inner modal-inner">
-                            <div class="card modal-card">
-                                <div class="content modal-content">
-                                    <img src="./images/modal-img.png" alt="img" width="562" height="480">
-                                </div>
-                            </div>
-                            <div class="card modal-card">
-                                <div class="content modal-content">
-                                    <img src="./images/modal-img.png" alt="img" width="562" height="480">
-                                </div>
-                            </div>
-                            <div class="card modal-card">
-                                <div class="content modal-content">
-                                    <img src="./images/modal-img.png" alt="img" width="562" height="480">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="map modal-map">
-                    <button class="active first"></button>
-                    <button class="second"></button>
-                    <button class="third"></button>
-                </div>
-            </div>
-            <p class="modal-desc">
-                <span class="modal-desc-span">Arif Solar, Arif International Holdingning energetika yo'nalishidagi sho' ba korxonasi xisoblanadi. </span>Korxonamizning
-                quyosh elektr stansiyalarini qurishuchun dunyoning eng sifatli barcha hom ashyo va mahsulotlarni olib
-                kelish va o'rnatish bilan shug'ullanadi.
-                Asosiy magsadlarimizdan biri O'zbekistonda gaytatiklanuvchi elektr energiya manbaylarini ko'paytirish
-                orgali, tabiatga keltirilayotgan zararlarni kamaytirish!
-            </p>
-        </div>
-    </div>
-    <div class="overlay" id="modalOverlay"></div>
-</div>
-
-<div class="hamburger-modal hidden" style="transition: 0.3s;">
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-        <div class="hamburger-modal-box">
-            <a href="tel:712030056" class="header-tell">
-                <img class="header-tell-img" src="{{ asset("a/images/phone-vector.svg")}}" alt="phone" width="24"
-                     height="24">
-                71 203 00 56
-            </a>
-            <span class="header-left-line"></span>
-            <a class="header-telegram-icon" href="https://t.me/solarzoneuz">
-                <img src="{{ asset("a/images/telegram-icon.svg")}}" alt="telegram" width="44" height="44">
-            </a>
-            <span class="header-left-line"></span>
-            <a href="{{ route("language",$lang) }}">
-                <button class="header-lang-icon">
-                    <img src="{{ asset("arifsolar/images/$img") }}" alt="telegram" width="44" height="44">
-                </button>
-            </a>
-        </div>
-        <button class="close-hamburger-modal"></button>
-    </div>
-</div>
-
 </body>
-<script src="{{ asset("a/js/index.js")}}"></script>
-<script src="{{ asset("a/js/carousel.js")}}"></script>
+<script src="{{ asset("front/js/index.js")}}"></script>
+<script src="{{ asset("front/js/carousel.js")}}"></script>
+<script src="{{ asset("front/js/new.js")}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+@if(Session::get('success'))
+    <script>
+        toastr.success("Siz bilan tez orada mutaxassislarimiz bog‘lanishadi!");
+    </script>
+@endif
 </html>

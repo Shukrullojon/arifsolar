@@ -21,8 +21,10 @@
                             </tr>
 
                             <tr>
-                                <th>Link</th>
-                                <td>{{ $partner->link }}</td>
+                                <th>Image</th>
+                                <td>
+                                    <img src="{{ asset("public/files/".$job->image) }}" width="200">
+                                </td>
                             </tr>
 
                             <tr>

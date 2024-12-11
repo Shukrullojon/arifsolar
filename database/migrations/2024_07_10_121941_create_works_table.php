@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("title_uz");
             $table->string("title_ru");
-            $table->string("description_uz");
-            $table->string("description_ru");
+            $table->text("description_uz");
+            $table->text("description_ru");
+            $table->string("image")->nullable();
             $table->tinyInteger("status")->default(0);
             $table->timestamps();
         });

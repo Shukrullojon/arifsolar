@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
 class PartnerController extends Controller
@@ -39,7 +40,14 @@ class PartnerController extends Controller
         if ($validated->fails()){
             return back()->withInput()->withErrors($validated);
         }
-        Partner::create($request->all());
+        if ($request->hasFile("image")){
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
+        Partner::create([
+            'image' => $image ?? "",
+            'name' => $request->name,
+        ]);
         return redirect()->route('partner.index')->with('success','Partner create successfuly');
     }
 
@@ -76,9 +84,17 @@ class PartnerController extends Controller
             return back()->withInput()->withErrors($validated);
         }
 
+        if ($request->hasFile("image")){
+            $filePath = public_path('files/' . $partner->image);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
         $partner->update([
+            'image' => $image ?? $partner->image,
             'name' => $request->name,
-            'link' => $request->link,
             'status' => $request->status,
         ]);
         return redirect()->route('partner.index')->with('success','Partner update successfuly');
@@ -89,6 +105,10 @@ class PartnerController extends Controller
      */
     public function destroy(Partner $partner)
     {
+        $filePath = public_path('files/' . $partner->image);
+        if (File::exists($filePath)) {
+            File::delete($filePath);
+        }
         $partner->delete();
         return redirect()->route('partner.index')->with('success','Partner delete successfuly');
     }

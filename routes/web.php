@@ -2,12 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+Route::post('/notification', [App\Http\Controllers\HomeController::class, 'notification'])->name("notification");
 Auth::routes();
-
-Route::group(['middleware' => ['auth']], function () {
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'profile']);
-});
-
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group(function () {
         Route::get('/', [App\Http\Controllers\HomeController::class, 'profile'])->name("profile");
@@ -21,6 +18,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('question', \App\Http\Controllers\QuestionController::class);
         Route::resource('review', \App\Http\Controllers\ReviewController::class);
         Route::resource('work', \App\Http\Controllers\WorkController::class);
+        Route::resource('header', \App\Http\Controllers\HeaderController::class);
     });
 });
 

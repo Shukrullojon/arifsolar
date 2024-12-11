@@ -19,6 +19,7 @@ class WorkSeeder extends Seeder
                 'title_ru' => 'Bozorda',
                 'description_uz' => '10+ YIL uz',
                 'description_ru' => 'Bozorda ru',
+                'image' => "work-icon-truck.svg",
                 'status' => 1,
             ],
             [
@@ -26,6 +27,7 @@ class WorkSeeder extends Seeder
                 'title_ru' => 'Bozorda',
                 'description_uz' => '10+ YIL uz',
                 'description_ru' => 'Bozorda ru',
+                'image' => "work-icon-truck.svg",
                 'status' => 1,
             ],
             [
@@ -33,6 +35,7 @@ class WorkSeeder extends Seeder
                 'title_ru' => 'Bozorda',
                 'description_uz' => '10+ YIL uz',
                 'description_ru' => 'Bozorda ru',
+                'image' => "work-icon-truck.svg",
                 'status' => 1,
             ],
         ];

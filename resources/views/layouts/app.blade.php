@@ -153,5 +153,6 @@
 
 <script src="{{ asset("arifsolar/js/index.js")}}"></script>
 <script src="{{ asset("arifsolar/js/carousel.js")}}"></script>
+<script src="{{ asset("arifsolar/js/new.js")}}"></script>
 </body>
 </html>

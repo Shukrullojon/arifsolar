@@ -25,10 +25,10 @@
 
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <label for="link"><strong>Link:</strong></label>{!! Form::label('link',"*",['style'=>"color:red"]) !!}
-                                    {!! Form::text('link', null, ['autocomplete'=>'OFF','id'=>'link','placeholder' => 'Link','required'=>true,'class' => "form-control ".($errors->has('link') ? 'is-invalid' : '')]) !!}
-                                    @if($errors->has('link'))
-                                        <span class="error invalid-feedback">{{ $errors->first('link') }}</span>
+                                    <label for="image"><strong>Image:</strong></label>{!! Form::label('image',"*",['style'=>"color:red"]) !!}<br>
+                                    {!! Form::file('image', null, ['autocomplete'=>'OFF','id'=>'image','placeholder' => 'Image','required'=>true,'class' => "form-control ".($errors->has('image') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('image'))
+                                        <span class="error invalid-feedback">{{ $errors->first('image') }}</span>
                                     @endif
                                 </div>
                             </div>

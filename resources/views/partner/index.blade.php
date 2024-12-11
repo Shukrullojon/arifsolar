@@ -32,7 +32,7 @@
                             <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Link</th>
+                                <th>Image</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -41,7 +41,9 @@
                             @foreach($partners as $partner)
                                 <tr>
                                     <td>{{ $partner->name }}</td>
-                                    <td>{{ $partner->link }}</td>
+                                    <td>
+                                        <img src="{{ asset("public/files/".$partner->image) }}" width="100">
+                                    </td>
                                     <td>{{ \App\Models\Partner::$statuses[$partner->status] }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">

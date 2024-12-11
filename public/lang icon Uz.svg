@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="49.6458mm" height="49.6458mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1876.06 1876.06"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="671" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Facundo">
+		<font-face-src>
+			<font-face-name name="Facundo"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="U" horiz-adv-x="760" d="M592 70.0005c-52.0017,-52.6679 -122.668,-78.9999 -212,-78.9999 -89.3356,0 -160.002,26.332 -212,78.9999 -52.0017,52.6679 -77.9986,128.333 -77.9986,226.999l0 406.001 72.9963 0 0 -408c0,-74.0015 19.3351,-131.833 58.0013,-173.499 38.6662,-41.67 91.6692,-62.503 159.001,-62.503 67.3318,0 120.335,20.833 159.001,62.503 38.6662,41.666 57.9974,99.4978 57.9974,173.499l0 408 73.0003 0 0 -406.001c0,-98.6661 -26.0009,-174.331 -77.9986,-226.999z"/>
+   <glyph unicode="z" horiz-adv-x="488" d="M449 506l0 -52.999 -315.999 -389 315.999 0 0 -64.0009 -412.998 0 0 52.999 315.999 389 -306.003 0 0 64.0009 403.001 0z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Facundo";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke:white;stroke-width:10.04;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:#FEFEFE}
+    .fnt0 {font-weight:normal;font-size:958.64px;font-family:'Facundo'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0 str0" d="M938.03 5.02l0 0c515.2,0 933.01,417.81 933.01,933.01l0 0c0,515.2 -417.81,933.01 -933.01,933.01l0 0c-515.2,0 -933.01,-417.81 -933.01,-933.01l0 0c0,-515.2 417.81,-933.01 933.01,-933.01z"/>
+  <g transform="matrix(1 0 0 1 -2164.02 487.919)">
+   <text x="2482.29" y="782.76"  class="fil1 fnt0">Uz</text>
+  </g>
+ </g>
+</svg>

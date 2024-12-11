@@ -35,6 +35,12 @@
                                 <td>{{ $work->description_ru }}</td>
                             </tr>
                             <tr>
+                                <th>Image</th>
+                                <td>
+                                    <img src="{{ asset("public/files/".$work->image) }}" width="200">
+                                </td>
+                            </tr>
+                            <tr>
                                 <th>Status</th>
                                 <td>{{ \App\Models\Work::$statuses[$work->status] }}</td>
                             </tr>

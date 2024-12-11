@@ -44,7 +44,12 @@ class WorkController extends Controller
         if ($validated->fails()){
             return back()->withInput()->withErrors($validated);
         }
+        if ($request->hasFile("image")){
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
         Work::create([
+            'image' => $image ?? "",
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'description_uz' => $request->description_uz,
@@ -89,7 +94,16 @@ class WorkController extends Controller
         if ($validated->fails()){
             return back()->withInput()->withErrors($validated);
         }
+        if ($request->hasFile("image")){
+            $filePath = public_path('files/' . $job->image);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+            $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('files'), $image);
+        }
         $work->update([
+            'image' => $image ?? $job->image,
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'description_uz' => $request->description_uz,
@@ -104,6 +118,12 @@ class WorkController extends Controller
      */
     public function destroy(Work $work)
     {
+        if ($work->image) {
+            $filePath = public_path('files/' . $work->image);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+        }
         $work->delete();
         return redirect()->route('work.index')->with('success','Work delete successfuly');
     }
