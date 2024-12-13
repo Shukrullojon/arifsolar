@@ -2,7 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', function () {
+    $locale = session()->get('locale') ?? "uz";
+    return redirect("/$locale");
+});
+
+Route::group(['prefix' => '{lang}', 'where' => ['lang' => 'uz|ru']], function () {
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
+});
+
 Route::post('/notification', [App\Http\Controllers\HomeController::class, 'notification'])->name("notification");
 Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
@@ -30,5 +38,5 @@ Route::get('/language/{lang}',function ($lang){
             'locale' => $lang
         ]);
     }
-    return redirect()->back();
+    return redirect()->route("welcome", $lang);
 })->name("language");
