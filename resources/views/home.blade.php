@@ -395,7 +395,7 @@
                     <div class="free-tial-carousel-box">
                         <div class="center">
                             <div class="wrapper">
-                                <div class="inner">
+                                <div class="inner" id="slides">
                                     @foreach($consultations as $consultation)
                                         <div class="card" id="innerConsultation_{{ $consultation->id }}">
                                             <div class="content">
@@ -407,11 +407,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="map">
-                            @foreach ($consultations as $key => $consultation)
-                                <button class="consultation_map {{ $loop->first ? 'active' : '' }}"
-                                        data-index="{{ $key }}"
-                                        id="modalMapConsultation_{{ $consultation->id }}"></button>
+                        <div class="map" id="buttonsWrapper">
+                            @foreach($consultations as $key => $consultation)
+                                <button class="{{ $key === 0 ? 'active' : '' }}" data-index="{{ $key }}"></button>
                             @endforeach
                         </div>
                     </div>

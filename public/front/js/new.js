@@ -205,4 +205,25 @@ document.querySelectorAll('.questions-item').forEach((questionsItem) => {
     });
 });
 
+const buttonsWrapper = document.getElementById("buttonsWrapper");
+const slides = document.getElementById("slides");
+const cards = slides.querySelectorAll(".card");
+
+// Calculate slide width percentage
+const slideWidth = 100 / cards.length;
+
+buttonsWrapper.addEventListener("click", (e) => {
+    if (e.target.nodeName === "BUTTON") {
+        // Remove 'active' class from all buttons
+        Array.from(buttonsWrapper.children).forEach((button) =>
+            button.classList.remove("active")
+        );
+        // Add 'active' class to clicked button
+        e.target.classList.add("active");
+        // Get button index
+        const index = e.target.getAttribute("data-index");
+        // Update transform style for slides
+        slides.style.transform = `translateX(-${index * slideWidth}%)`;
+    }
+});
 
