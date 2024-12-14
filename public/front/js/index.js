@@ -27,8 +27,6 @@ let ourJobsItem6 = document.querySelector("#ourJobsItem6")
 let ourJobsItem7 = document.querySelector("#ourJobsItem7")
 let ourJobsItem8 = document.querySelector("#ourJobsItem8")
 let modalOverlay = document.querySelector("#modalOverlay")
-let hamburgerBtn = document.querySelector(".hamburger-btn")
-let closeHamburgerModal = document.querySelector(".close-hamburger-modal")
 let heroBtn = document.querySelector("#hero-form")
 let freeTialContactForm = document.querySelector("#freeTialContactForm")
 let ourJobrItemBtn = document.querySelector(".our-jobs-item-btn")
@@ -723,17 +721,7 @@ ourJobsItem8.addEventListener("click", () => {
    ourWorkModal.classList.remove("hidden")
 })
 
-
 modalOverlay.addEventListener("click", () => {
   ourWorkModal.classList.add("hidden")
 })
 
-let hamburgerModal = document.querySelector(".hamburger-modal")
-
-hamburgerBtn.addEventListener("click", () => {
-   hamburgerModal.classList.remove("hidden")
-})
-
-closeHamburgerModal.addEventListener("click", () => {
-   hamburgerModal.classList.add("hidden")
-})

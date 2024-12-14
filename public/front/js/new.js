@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.addEventListener("click", () => {
         if (activeVideo) {
-            activeVideo.pause(); // Pause the active video
+            activeVideo.pause();
             const buttonId = activeVideo.id.replace("aboutCustomerVideo", "");
             const relatedButton = document.querySelector(
                 `.aboutCustomerVideoBtnNew[button-id="${buttonId}"]`
@@ -171,5 +171,20 @@ document.querySelectorAll('.questions-item').forEach((item) => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerBtn = document.querySelector(".hamburger-btn");
+    const hamburgerModal = document.querySelector(".hamburger-modal");
+    const closeModalBtn = document.querySelector(".close-hamburger-modal");
+    // Show modal on hamburger button click
+    hamburgerBtn.addEventListener("click", () => {
+        hamburgerModal.classList.remove("hidden");
+    });
+    // Hide modal on close button click
+    closeModalBtn.addEventListener("click", () => {
+        hamburgerModal.classList.add("hidden");
+    });
+});
+
 
 

@@ -536,6 +536,29 @@
         <h3 class="footer-title">@lang('front.reserved') © Arifsolar.uz</h3>
     </div>
 </footer>
+
+<div class="hamburger-modal hidden" style="transition: 0.3s;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="hamburger-modal-box">
+            <a href="tel:712030056" class="header-tell">
+                <img class="header-tell-img" src="{{ asset("front/images/phone-vector.svg") }}" alt="phone" width="24" height="24">
+                71 203 00 56
+            </a>
+            <span class="header-left-line"></span>
+            <a class="header-telegram-icon" href="https://t.me/arifsolar" >
+                <img src="{{ asset("front/images/telegram-icon.svg") }}" alt="telegram" width="44" height="44">
+            </a>
+            <span class="header-left-line"></span>
+            <a href="{{ route("language",$lang) }}">
+                <button class="header-lang-icon">
+                    <img src="{{ asset("front/images/$img") }}" alt="language" width="44" height="44">
+                </button>
+            </a>
+        </div>
+        <button class="close-hamburger-modal"></button>
+    </div>
+</div>
+
 </body>
 <script src="{{ asset("front/js/index.js")}}"></script>
 <script src="{{ asset("front/js/carousel.js")}}"></script>
