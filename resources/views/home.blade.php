@@ -65,7 +65,7 @@
                 <span class="header-left-line"></span>
                 @php
                     $lang = App::getLocale('locale') == "uz" ? "ru" : "uz";
-                    $img = App::getLocale('locale') == "uz" ? "lang_icon_uz.svg" : "lang-icon.svg";
+                    $img = App::getLocale('locale') == "uz" ? "lang-icon2.svg.svg" : "lang_icon_uz.svg";
                 @endphp
                 <a href="{{ route("language",$lang) }}">
                     <button class="header-lang-icon">

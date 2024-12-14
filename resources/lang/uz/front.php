@@ -2,7 +2,7 @@
 
 return [
     'info_header' => 'Solar zone bilan hayotingizni qulay his qiling',
-    'logo_1' => "Quyosh panellarini o'rnatish",
+    'logo_1' => "O‘zbekistonda quyosh panellarini o‘rnatish xizmati",
     'logo_2' => "",
     'hero_title' => "O‘zbekistonda quyosh stansiyalarini o‘rnatish",
     'hero_desc' => "Bepul maslahat va xarajatlarni bilish uchun",
