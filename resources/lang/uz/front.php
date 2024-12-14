@@ -36,4 +36,5 @@ return [
     "send_request" => "So’rov yuborish",
     "question_title" => "Tez tez so'raladigan ",
     "question_title_1" => "savollar",
+    "again" => "Ko'proq",
 ];

@@ -157,7 +157,7 @@
                         <h3 class="work-title">@lang('front.job')</h3>
                     </div>
                 </div>
-                <ul class="our-jobs-list">
+                <ul class="our-jobs-list" id="job_content">
                     @foreach($jobs as $job)
                         <li class="our-jobs-item newOurJob"
                             style="background-image: url('{{ asset('public/files/'.$job->image) }}');"
@@ -167,7 +167,6 @@
                             <h3 class="our-jobs-item-title">{{ $job->title }}</h3>
                             <p class="our-jobs-item-desc">{{ $job->address }}</p>
                         </li>
-
                         <div class="our-work-modal hidden" id="ourWorkModal_{{ $job->id }}">
                             <div class="modal">
                                 <div class="modal-box">
@@ -206,6 +205,8 @@
                         </div>
                     @endforeach
                 </ul>
+                <br>
+                <button class="our-jobs-item-btn">@lang("front.again")</button>
             </div>
         </section>
     @endif

@@ -36,4 +36,5 @@ return [
     "send_request" => "Отправить запрос",
     "question_title" => "Часто задаваемые",
     "question_title_1" => "вопросы",
+    "again" => "Ещё",
 ];
