@@ -69,5 +69,6 @@ class Kernel extends HttpKernel
         'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
         'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
         'language' => \App\Http\Middleware\LanguageMiddleware::class,
+        'setlocale' => \App\Http\Middleware\SetLocale::class,
     ];
 }

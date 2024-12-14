@@ -3,12 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $locale = session()->get('locale') ?? "uz";
+    $locale = session()->get('locale') ?? 'uz';
     return redirect("/$locale");
 });
 
 Route::group(['prefix' => '{lang}', 'where' => ['lang' => 'uz|ru']], function () {
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
+        ->name('welcome')
+        ->middleware('setlocale');
 });
 
 Route::post('/notification', [App\Http\Controllers\HomeController::class, 'notification'])->name("notification");
