@@ -970,8 +970,10 @@ input:focus {
     color: #000000;
     transition: 0.3s;
     cursor: pointer;
-
-
+    display: block; /* Default state */
+}
+.questions-item-desc.hidden {
+    display: none;
 }
 
 .questions-item-desc-active {

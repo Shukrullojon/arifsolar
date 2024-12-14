@@ -35,7 +35,6 @@ class PartnerController extends Controller
     {
         $validated = Validator::make($request->all(),[
             'name' => 'required|string|max:200',
-            'link' => 'required|string|max:200',
         ]);
         if ($validated->fails()){
             return back()->withInput()->withErrors($validated);
@@ -78,7 +77,6 @@ class PartnerController extends Controller
     {
         $validated = Validator::make($request->all(),[
             'name' => 'required|string|max:200',
-            'link' => 'required|string|max:200',
         ]);
         if ($validated->fails()){
             return back()->withInput()->withErrors($validated);

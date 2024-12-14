@@ -95,7 +95,7 @@ class WorkController extends Controller
             return back()->withInput()->withErrors($validated);
         }
         if ($request->hasFile("image")){
-            $filePath = public_path('files/' . $job->image);
+            $filePath = public_path('files/' . $work->image);
             if (File::exists($filePath)) {
                 File::delete($filePath);
             }

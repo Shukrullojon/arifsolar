@@ -532,6 +532,7 @@
     @endif
 
 </main>
+
 <footer>
     <div class="container">
         <h3 class="footer-title">@lang('front.reserved') © Arifsolar.uz</h3>

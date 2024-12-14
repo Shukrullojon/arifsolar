@@ -12,12 +12,6 @@ let aboutCustomerVideoBtn3 = document.querySelector("#aboutCustomerVideoBtn3");
 let aboutCustomerVideoBtn4 = document.querySelector("#aboutCustomerVideoBtn4");
 let aboutCustomerVideoBtn5 = document.querySelector("#aboutCustomerVideoBtn5");
 let aboutCustomerVideoBtn6 = document.querySelector("#aboutCustomerVideoBtn6");
-let questionsItem1 = document.querySelector("#questionsItem1")
-let questionsItem2 = document.querySelector("#questionsItem2")
-let questionsItem3 = document.querySelector("#questionsItem3")
-let questionsItem4 = document.querySelector("#questionsItem4")
-let questionsItem5 = document.querySelector("#questionsItem5")
-let questionsItem6 = document.querySelector("#questionsItem6")
 let ourJobsItem1 = document.querySelector("#ourJobsItem1")
 let ourJobsItem2 = document.querySelector("#ourJobsItem2")
 let ourJobsItem3 = document.querySelector("#ourJobsItem3")
@@ -551,131 +545,7 @@ aboutCustomerVideoBtn6.addEventListener("click", (e) => {
 
 // questions section
 
-questionsItem1.addEventListener("click", () => {
-   itemDesc = document.querySelector("#questionsItem1 > p")
-   itemBtn = document.querySelector("#questionsItem1 > div > button")
 
-
-   if(questionsItem1.classList == "questions-item-active"){
-      itemBtn.classList.remove("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc")
-   itemDesc.classList.remove("questions-item-desc-active")
-   questionsItem1.classList.add("questions-item")
-   questionsItem1.classList.remove("questions-item-active")
-   } else if (questionsItem1.classList == "questions-item"){
-      itemBtn.classList.add("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc-active")
-      itemDesc.classList.remove("questions-item-desc")
-      questionsItem1.classList.add("questions-item-active")
-      questionsItem1.classList.remove("questions-item")
-   }
-
-})
-
-questionsItem2.addEventListener("click", () => {
-   itemDesc = document.querySelector("#questionsItem2 > p")
-   itemBtn = document.querySelector("#questionsItem2 > div > button")
-
-
-   if(questionsItem2.classList == "questions-item-active"){
-      itemBtn.classList.remove("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc")
-   itemDesc.classList.remove("questions-item-desc-active")
-   questionsItem2.classList.add("questions-item")
-   questionsItem2.classList.remove("questions-item-active")
-   } else if (questionsItem2.classList == "questions-item"){
-      itemBtn.classList.add("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc-active")
-      itemDesc.classList.remove("questions-item-desc")
-      questionsItem2.classList.add("questions-item-active")
-      questionsItem2.classList.remove("questions-item")
-   }
-
-})
-
-questionsItem3.addEventListener("click", () => {
-   itemDesc = document.querySelector("#questionsItem3 > p")
-   itemBtn = document.querySelector("#questionsItem3 > div > button")
-
-
-   if(questionsItem3.classList == "questions-item-active"){
-      itemBtn.classList.remove("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc")
-   itemDesc.classList.remove("questions-item-desc-active")
-   questionsItem3.classList.add("questions-item")
-   questionsItem3.classList.remove("questions-item-active")
-   } else if (questionsItem3.classList == "questions-item"){
-      itemBtn.classList.add("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc-active")
-      itemDesc.classList.remove("questions-item-desc")
-      questionsItem3.classList.add("questions-item-active")
-      questionsItem3.classList.remove("questions-item")
-   }
-
-})
-
-questionsItem4.addEventListener("click", () => {
-   itemDesc = document.querySelector("#questionsItem3 > p")
-   itemBtn = document.querySelector("#questionsItem4 > div > button")
-
-
-   if(questionsItem4.classList == "questions-item-active"){
-      itemBtn.classList.remove("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc")
-   itemDesc.classList.remove("questions-item-desc-active")
-   questionsItem4.classList.add("questions-item")
-   questionsItem4.classList.remove("questions-item-active")
-   } else if (questionsItem4.classList == "questions-item"){
-      itemBtn.classList.add("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc-active")
-      itemDesc.classList.remove("questions-item-desc")
-      questionsItem4.classList.add("questions-item-active")
-      questionsItem4.classList.remove("questions-item")
-   }
-
-})
-
-questionsItem5.addEventListener("click", () => {
-   itemDesc = document.querySelector("#questionsItem5 > p")
-   itemBtn = document.querySelector("#questionsItem5 > div > button")
-
-
-   if(questionsItem5.classList == "questions-item-active"){
-      itemBtn.classList.remove("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc")
-   itemDesc.classList.remove("questions-item-desc-active")
-   questionsItem5.classList.add("questions-item")
-   questionsItem5.classList.remove("questions-item-active")
-   } else if (questionsItem5.classList == "questions-item"){
-      itemBtn.classList.add("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc-active")
-      itemDesc.classList.remove("questions-item-desc")
-      questionsItem5.classList.add("questions-item-active")
-      questionsItem5.classList.remove("questions-item")
-   }
-
-})
-
-questionsItem6.addEventListener("click", () => {
-   itemDesc = document.querySelector("#questionsItem6 > p")
-   itemBtn = document.querySelector("#questionsItem6 > div > button")
-
-
-   if(questionsItem6.classList == "questions-item-active"){
-      itemBtn.classList.remove("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc")
-   itemDesc.classList.remove("questions-item-desc-active")
-   questionsItem6.classList.add("questions-item")
-   questionsItem6.classList.remove("questions-item-active")
-   } else if (questionsItem6.classList == "questions-item"){
-      itemBtn.classList.add("questions-item-btn-active")
-      itemDesc.classList.add("questions-item-desc-active")
-      itemDesc.classList.remove("questions-item-desc")
-      questionsItem6.classList.add("questions-item-active")
-      questionsItem6.classList.remove("questions-item")
-   }
-
-})
 
 // our jobs item
 
@@ -720,6 +590,7 @@ ourJobsItem8.addEventListener("click", () => {
 
    ourWorkModal.classList.remove("hidden")
 })
+
 
 modalOverlay.addEventListener("click", () => {
   ourWorkModal.classList.add("hidden")

@@ -158,20 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.querySelectorAll('.questions-item').forEach((item) => {
-    item.addEventListener('click', (e) => {
-        if (e.target.classList.contains('questions-item-btn') || e.target.classList.contains('questions-item-title')) {
-            alert("123");
-            const desc = item.querySelector('.questions-item-desc');
-            if (desc.style.display === 'none') {
-                desc.style.display = 'block';
-            } else {
-                desc.style.display = 'none';
-            }
-        }
-    });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
     const hamburgerBtn = document.querySelector(".hamburger-btn");
     const hamburgerModal = document.querySelector(".hamburger-modal");
@@ -186,5 +172,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.questions-item').forEach((item) => {
+        item.addEventListener('click', (e) => {
+            if (e.target.classList.contains('questions-item-btn') || e.target.classList.contains('questions-item-title')) {
+                const desc = item.querySelector('.questions-item-desc');
+
+                // Use class-based toggling for better CSS control
+                desc.classList.toggle('hidden');
+            }
+        });
+    });
+});
+
+document.querySelectorAll('.questions-item').forEach((questionsItem) => {
+    questionsItem.addEventListener("click", () => {
+        const itemDesc = questionsItem.querySelector('p');
+        const itemBtn = questionsItem.querySelector('div > button');
+        if (questionsItem.classList.contains("questions-item-active")) {
+            itemBtn.classList.remove("questions-item-btn-active");
+            itemDesc.classList.add("questions-item-desc");
+            itemDesc.classList.remove("questions-item-desc-active");
+            questionsItem.classList.add("questions-item");
+            questionsItem.classList.remove("questions-item-active");
+        } else {
+            itemBtn.classList.add("questions-item-btn-active");
+            itemDesc.classList.add("questions-item-desc-active");
+            itemDesc.classList.remove("questions-item-desc");
+            questionsItem.classList.add("questions-item-active");
+            questionsItem.classList.remove("questions-item");
+        }
+    });
+});
 
 
