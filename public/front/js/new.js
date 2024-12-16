@@ -40,6 +40,16 @@ document.querySelectorAll(".newOurJob").forEach(jobItem => {
     });
 });
 
+document.querySelectorAll(".newOurJobNew").forEach(jobItem => {
+    jobItem.addEventListener("click", () => {
+        const jobId = jobItem.getAttribute("data-job-id");
+        const modal = document.querySelector(`#ourWorkModal_${jobId}`);
+        if (modal) {
+            modal.classList.remove("hidden");
+        }
+    });
+});
+
 document.querySelectorAll(".OurNews").forEach(newItem => {
     newItem.addEventListener("click", () => {
         const newId = newItem.getAttribute("data-new-id");

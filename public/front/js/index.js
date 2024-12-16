@@ -23,7 +23,6 @@ let ourJobsItem8 = document.querySelector("#ourJobsItem8")
 let modalOverlay = document.querySelector("#modalOverlay")
 let heroBtn = document.querySelector("#hero-form")
 let freeTialContactForm = document.querySelector("#freeTialContactForm")
-let ourJobrItemBtn = document.querySelector(".our-jobs-item-btn")
 // let activeOurJobsItem = document.querySelector(".our-jobs-item:nth-child(4)")
 let ourJobList = document.querySelector(".our-jobs-list")
 let newsItemBoxLink1 = document.querySelector("#newsItemBoxLink1")
@@ -57,16 +56,6 @@ newsItemBoxLink1.addEventListener("click", () => {
  newsItemBoxLink6.addEventListener("click", () => {
    ourWorkModal.classList.remove("hidden")
  })
-
-ourJobrItemBtn.addEventListener("click", () => {
-   // ourJobList.classList.add("our-jobs-list-active")
-   ourJobsItem5.classList.add("active-our-Jobs-Item5")
-   ourJobsItem6.classList.add("active-our-Jobs-Item6")
-   ourJobsItem7.classList.add("active-our-Jobs-Item7")
-   ourJobsItem8.classList.add("active-our-Jobs-Item8")
-   ourJobrItemBtn.classList.add("active-our-jobs-item-btn")
-   ourJobsItem4.classList.remove("our-jobs-item-box")
-})
 
 heroBtn.addEventListener("submit", (a) => {
 //  console.log(a.target);

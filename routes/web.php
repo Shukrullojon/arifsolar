@@ -14,6 +14,8 @@ Route::group(['prefix' => '{lang}', 'where' => ['lang' => 'uz|ru']], function ()
 });
 
 Route::post('/notification', [App\Http\Controllers\HomeController::class, 'notification'])->name("notification");
+Route::post('/jobAdd', [App\Http\Controllers\HomeController::class, 'jobAdd'])->name("jobAdd");
+
 Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group(function () {

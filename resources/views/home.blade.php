@@ -179,12 +179,10 @@
                     </div>
                 </div>
                 <ul class="our-jobs-list" id="job_content">
+                    <input type="hidden" id="input_hidden" name="input_hidden" value="0">
                     @foreach($jobs as $job)
-                        <li class="our-jobs-item newOurJob"
-                            style="background-image: url('{{ asset('public/files/'.$job->image) }}');"
-                            data-job-id="{{ $job->id }}">
-                            <img style="margin-bottom: 26px;" src="{{ asset("public/files/".$job->image_logo) }}"
-                                 alt="{{ $job->img_alt }}" width="{{ $job->width }}" height="{{ $job->height }}">
+                        <li class="our-jobs-item newOurJob" style="background-image: url('{{ asset('public/files/'.$job->image) }}');" data-job-id="{{ $job->id }}">
+                            <img style="margin-bottom: 26px;" src="{{ asset("public/files/".$job->image_logo) }}" alt="{{ $job->img_alt }}" width="{{ $job->width }}" height="{{ $job->height }}">
                             <h3 class="our-jobs-item-title">{{ $job->title }}</h3>
                             <p class="our-jobs-item-desc">{{ $job->address }}</p>
                         </li>
@@ -227,7 +225,7 @@
                     @endforeach
                 </ul>
                 <br>
-                <button class="our-jobs-item-btn">@lang("front.again")</button>
+                <button class="our-jobs-item-btn" id="loadMoreBtn" data-url="{{ route('jobAdd') }}">@lang("front.again")</button>
             </div>
         </section>
     @endif
@@ -581,10 +579,107 @@
 </div>
 
 </body>
+
 <script src="{{ asset("front/js/index.js")}}"></script>
 <script src="{{ asset("front/js/carousel.js")}}"></script>
 <script src="{{ asset("front/js/new.js")}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+        const jobContent = document.getElementById("job_content");
+        const inputHidden = document.getElementById("input_hidden");
+        loadMoreBtn.addEventListener("click", async function () {
+            const url = loadMoreBtn.dataset.url;
+            const inputHiddenValue = parseInt(inputHidden.value);
+
+            try {
+                // Send a POST request to the backend
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": "{{ csrf_token() }}", // Include CSRF token
+                    },
+                    body: JSON.stringify({
+                        input_hidden: inputHiddenValue,
+                    }),
+                });
+                const data = await response.json();
+                if (data.status && data.jobs.length > 0) {
+                    // Update the hidden input value
+                    inputHidden.value = inputHiddenValue + 1;
+
+                    // Append new jobs and modals to the job content
+                    data.jobs.forEach(job => {
+                        // Create the job list item
+                        const jobItem = document.createElement("li");
+                        jobItem.className = "our-jobs-item newOurJobNew";
+                        jobItem.setAttribute("data-job-id", job.id);
+                        jobItem.style.backgroundImage = `url('public/files/${job.image}')`;
+
+                        jobItem.innerHTML = `
+                        <img style="margin-bottom: 26px;" src="public/files/${job.image_logo}" alt="${job.img_alt}" width="${job.width}" height="${job.height}">
+                        <h3 class="our-jobs-item-title">${job.title}</h3>
+                        <p class="our-jobs-item-desc">${job.address}</p>
+                    `;
+                        jobContent.appendChild(jobItem);
+                        // Create the modal content
+                        const modal = document.createElement("div");
+                        modal.className = "our-work-modal hidden";
+                        modal.id = `ourWorkModal_${job.id}`;
+                        let modalFilesHtml = "";
+                        job.files.forEach(file => {
+                            modalFilesHtml += `
+                            <div class="card modal-card">
+                                <div class="content modal-content">
+                                    <img src="public/files/${file.file}" alt="arif solar" width="562" height="480">
+                                </div>
+                            </div>
+                        `;
+                        });
+                        let modalButtonsHtml = "";
+                        job.files.forEach((file, key) => {
+                            modalButtonsHtml += `
+                            <button class="${key === 0 ? 'active' : ''}" data-index="${key}"></button>
+                        `;
+                        });
+                        modal.innerHTML = `
+                        <div class="modal">
+                            <div class="modal-box">
+                                <button class="close-modal-btn" data-modal-id="ourWorkModal_${job.id}">X</button>
+                                <div class="modal-carousel-box">
+                                    <div class="center modal-center">
+                                        <div class="wrapper modal-wrapper">
+                                            <div class="inner modal-inner" id="modalInner_${job.id}">
+                                                ${modalFilesHtml}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="map modal-map" id="modalMap_${job.id}">
+                                        ${modalButtonsHtml}
+                                    </div>
+                                </div>
+                                <p class="modal-desc">${job.description}</p>
+                            </div>
+                        </div>
+                        <div class="overlay" id="modalOverlay_${job.id}"></div>
+                    `;
+
+                        jobContent.appendChild(modal);
+                    });
+                } else {
+                    // Hide the button if no more jobs are returned
+                    loadMoreBtn.style.display = "none";
+                }
+            } catch (error) {
+                console.error("Error loading more jobs:", error);
+                alert("An error occurred. Please try again.");
+            }
+        });
+    });
+
+</script>
 @if(Session::get('success'))
     <script>
         toastr.success("Siz bilan tez orada mutaxassislarimiz bog‘lanishadi!");
