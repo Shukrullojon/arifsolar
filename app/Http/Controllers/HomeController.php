@@ -60,7 +60,7 @@ class HomeController extends Controller
         $news = News::select("id","img_alt_$locale as img_alt","created_at","image","title_$locale as title", "description_$locale as description","created_at")->where('status',1)->latest()->get();
         $partners = Partner::select("id","image")->where('status',1)->latest()->get();
         $questions = Question::select("id","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
-        $jobs = Job::select("id", "img_alt_$locale as img_alt","image","image_logo","title_$locale as title", "description_$locale as description", "address_$locale as address","width","height","status")->where('status',1)->latest()->take(5)->get();
+        $jobs = Job::select("id", "img_alt_$locale as img_alt","image","image_logo","title_$locale as title", "description_$locale as description", "address_$locale as address","width","height","status")->where('status',1)->latest()->take(3)->get();
         $consultations = Consultation::select("id","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
         return view('home',[
             'header' => $header,
