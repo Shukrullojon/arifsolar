@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+@php
+    $lang = App::getLocale('locale') == "uz" ? "ru" : "uz";
+    $h_lang = $lang == "uz" ? "ru" : "uz";
+    $img = App::getLocale('locale') == "uz" ? "lang-icon2.svg.svg" : "lang_icon_uz.svg";
+@endphp
+<html lang="{{ $h_lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Arifsolar - O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
+    <meta name="keywords" content="Arif Solar, Arif, Solar, Quyosh Panellari">
+    <meta name="author" content="arifsolar">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
+    <meta property="og:description" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arifsolar.uz">
+    <meta property="og:image" content="">
+
+    <meta name="twitter:card" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
+    <meta name="twitter:title" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
+    <meta name="twitter:description" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
+    <meta name="twitter:image" content="">
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="canonical" href="https://arifsolar.uz">
+
+    <link rel="canonical" href="https://arifsolar.uz">
+    <link rel="alternate" hreflang="uz" href="https://arifsolar.uz/uz">
+    <link rel="alternate" hreflang="ru" href="https://arifsolar.uz/ru">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset("front/css/carousel.css")}}">
     <link rel="stylesheet" href="{{ asset("front/css/main.css")}}">
@@ -63,10 +87,7 @@
                     <img src="{{ asset("front/images/telegram-icon.svg")}}" alt="telegram" width="44" height="44">
                 </a>
                 <span class="header-left-line"></span>
-                @php
-                    $lang = App::getLocale('locale') == "uz" ? "ru" : "uz";
-                    $img = App::getLocale('locale') == "uz" ? "lang-icon2.svg.svg" : "lang_icon_uz.svg";
-                @endphp
+
                 <a href="{{ route("language",$lang) }}">
                     <button class="header-lang-icon">
                         <img src="{{ asset("front/images/$img") }}" alt="telegram" width="44" height="44">
@@ -474,7 +495,7 @@
                         <img src="{{ asset("front/images/phone-icon.svg")}}" alt="phone" width="64" height="64">
                         <p class="address-item-desc">
                             @lang("front.phone"): <br>
-                            <span>+998 (71) 203 00 56</span>
+                            <span style="cursor: pointer;" onclick="location.href='tel:+998712030056';">+998 (71) 203 00 56</span>
                         </p>
                     </li>
                     <li class="address-item">
@@ -488,8 +509,8 @@
                         <img src="{{ asset("front/images/mail-icon.svg")}}" alt="mail" width="64" height="64">
                         <p class="address-item-desc">
                             @lang("front.email"): <br>
-                            <span>salesuzexim@gmail.com</span><br>
-                            <span>ceo@arif.uz</span>
+                            <span style="cursor: pointer;" onclick="location.href='mailto:salesuzexim@gmail.com';">salesuzexim@gmail.com</span><br>
+                            <span style="cursor: pointer;" onclick="location.href='mailto:ceo@arif.uz';">ceo@arif.uz</span>
                         </p>
                     </li>
                     <li class="address-item">
