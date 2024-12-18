@@ -48,8 +48,13 @@ class WorkController extends Controller
             $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
             $request->image->move(public_path('files'), $image);
         }
+        if ($request->hasFile("hover_image")){
+            $hover_image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->hover_image->getClientOriginalExtension();
+            $request->hover_image->move(public_path('files'), $hover_image);
+        }
         Work::create([
             'image' => $image ?? "",
+            'hover_image' => $hover_image ?? "",
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'description_uz' => $request->description_uz,
@@ -102,8 +107,17 @@ class WorkController extends Controller
             $image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->image->getClientOriginalExtension();
             $request->image->move(public_path('files'), $image);
         }
+        if ($request->hasFile("hover_image")){
+            $filePath = public_path('files/' . $work->hover_image);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+            $hover_image = date('Y_m_d_H_i_s') . rand(10000, 99999) . '.' . $request->hover_image->getClientOriginalExtension();
+            $request->hover_image->move(public_path('files'), $hover_image);
+        }
         $work->update([
-            'image' => $image ?? $job->image,
+            'image' => $image ?? $work->image,
+            'hover_image' => $hover_image ?? $work->hover_image,
             'title_uz' => $request->title_uz,
             'title_ru' => $request->title_ru,
             'description_uz' => $request->description_uz,
@@ -120,6 +134,12 @@ class WorkController extends Controller
     {
         if ($work->image) {
             $filePath = public_path('files/' . $work->image);
+            if (File::exists($filePath)) {
+                File::delete($filePath);
+            }
+        }
+        if ($work->hover_image) {
+            $filePath = public_path('files/' . $work->hover_image);
             if (File::exists($filePath)) {
                 File::delete($filePath);
             }

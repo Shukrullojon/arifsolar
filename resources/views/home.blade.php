@@ -158,7 +158,7 @@
                     @foreach($works as $work)
                         <li class="work-item"
                             style="background-image: url('{{ asset('public/files/'.$work->image) }}');"
-                            data-hover-image="{{ asset('public/files/'.$work->image) }}">
+                            data-hover-image="{{ asset('public/files/'.$work->hover_image) }}">
                             <h4 class="work-item-title">{{ $work->title }}</h4>
                             <p class="work-item-desc">{{ $work->description }}</p>
                         </li>

@@ -54,7 +54,7 @@ class HomeController extends Controller
         $locale = $locale ?: "uz";
         $header = Header::select("id","styles","title_$locale as title", "button_title_$locale as button_title", "section_id")->where('status',1)->latest()->first();
         $about = About::select("id","video","image","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->first();
-        $works = Work::select("id","image","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
+        $works = Work::select("id","hover_image","image","title_$locale as title", "description_$locale as description")->where('status',1)->latest()->get();
         $reviews = Review::select("id","video","name")->where('status',1)->latest()->get();
         $comments = Comment::select("id","comment_$locale as comment", "fio", "company")->where('status',1)->latest()->get();
         $news = News::select("id","img_alt_$locale as img_alt","created_at","image","title_$locale as title", "description_$locale as description","created_at")->where('status',1)->latest()->get();

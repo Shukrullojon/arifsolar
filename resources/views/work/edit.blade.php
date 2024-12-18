@@ -62,12 +62,22 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="col-xs-3 col-sm-3 col-md-3">
                                 <div class="form-group">
                                     <label for="image"><strong>Images:</strong></label>{!! Form::label('image',"*",['style'=>"color:red"]) !!}<br>
                                     <input type="file" name="image" class="form-control">
                                     @if($errors->has('image'))
                                         <span class="error invalid-feedback">{{ $errors->first('image') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <div class="form-group">
+                                    <label for="hover_image"><strong>Hover Image:</strong></label>{!! Form::label('hover_image',"*",['style'=>"color:red"]) !!}<br>
+                                    <input type="file" name="hover_image" class="form-control">
+                                    @if($errors->has('hover_image'))
+                                        <span class="error invalid-feedback">{{ $errors->first('hover_image') }}</span>
                                     @endif
                                 </div>
                             </div>

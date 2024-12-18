@@ -34,6 +34,7 @@
                                 <th>Title(uz)</th>
                                 <th>Descrition(uz)</th>
                                 <th>Image</th>
+                                <th>Hover Image</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -45,6 +46,9 @@
                                     <td>{!! $work->description_uz !!}</td>
                                     <td>
                                         <img src="{{ asset("public/files/".$work->image) }}" width="100">
+                                    </td>
+                                    <td>
+                                        <img src="{{ asset("public/files/".$work->hover_image) }}" width="100">
                                     </td>
                                     <td>{{ \App\Models\Work::$statuses[$work->status] }}</td>
                                     <td class="text-center">

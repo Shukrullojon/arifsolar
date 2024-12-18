@@ -40,6 +40,14 @@
                                     <img src="{{ asset("public/files/".$work->image) }}" width="200">
                                 </td>
                             </tr>
+
+                            <tr>
+                                <th>Hover Image</th>
+                                <td>
+                                    <img src="{{ asset("public/files/".$work->hover_image) }}" width="200">
+                                </td>
+                            </tr>
+
                             <tr>
                                 <th>Status</th>
                                 <td>{{ \App\Models\Work::$statuses[$work->status] }}</td>
