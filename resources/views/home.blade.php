@@ -18,13 +18,13 @@
     <meta property="og:description" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arifsolar.uz">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="{{ asset("front/images/icon.png") }}">
 
     <meta name="twitter:card" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
     <meta name="twitter:title" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
     <meta name="twitter:description" content="Arifsolar – O‘zbekistonda quyosh panellarini o‘rnatish xizmati">
-    <meta name="twitter:image" content="">
-    <link rel="icon" href="" type="image/x-icon">
+    <meta name="twitter:image" content="{{ asset("front/images/icon.png") }}">
+    <link rel="icon" href="{{ asset("front/images/icon.png") }}" type="image/x-icon">
     <link rel="canonical" href="https://arifsolar.uz">
 
     <link rel="canonical" href="https://arifsolar.uz">
@@ -49,7 +49,7 @@
         <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
             <div style="display: flex">
                 <h1 class="header-top-title">{!! $header->title !!}</h1>
-                <a class="header_button" style="margin-left: 5px"
+                <a class="header_button" style="{{ $header->styles }}"
                    href="#{{ $header->section_id }}">{{ $header->button_title }}</a>
             </div>
             <div>
@@ -225,7 +225,7 @@
                     @endforeach
                 </ul>
                 <br>
-                <button class="our-jobs-item-btn" id="loadMoreBtn" data-url="{{ route('jobAdd') }}">@lang("front.again")</button>
+                <button class="our-jobs-item-btn" style="width: 40%; display: block; margin: 0 auto;" id="loadMoreBtn" data-url="{{ route('jobAdd') }}">@lang("front.again")</button>
             </div>
         </section>
     @endif
@@ -607,6 +607,9 @@
                 });
                 const data = await response.json();
                 if (data.status && data.jobs.length > 0) {
+                    if(data.jobs.length < 3){
+                        loadMoreBtn.style.display = "none";
+                    }
                     // Update the hidden input value
                     inputHidden.value = inputHiddenValue + 1;
 

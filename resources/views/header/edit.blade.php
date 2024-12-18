@@ -53,12 +53,22 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <label for="status"><strong>Section:</strong></label>{!! Form::label('status',"*",['style'=>"color:red"]) !!}
                                     {!! Form::select('section_id', \App\Models\Header::$sections,null, ['autocomplete'=>'OFF','id'=>'section_id','required'=>true,'class' => "form-control ".($errors->has('section_id') ? 'is-invalid' : '')]) !!}
                                     @if($errors->has('section_id'))
                                         <span class="error invalid-feedback">{{ $errors->first('section_id') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="styles"><strong>Style:</strong></label>{!! Form::label('styles',"*",['style'=>"color:red"]) !!}
+                                    {!! Form::text('styles', null, ['autocomplete'=>'OFF','id'=>'styles','placeholder' => 'Style','class' => "form-control ".($errors->has('styles') ? 'is-invalid' : '')]) !!}
+                                    @if($errors->has('styles'))
+                                        <span class="error invalid-feedback">{{ $errors->first('styles') }}</span>
                                     @endif
                                 </div>
                             </div>

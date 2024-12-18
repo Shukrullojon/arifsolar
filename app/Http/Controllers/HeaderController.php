@@ -48,6 +48,7 @@ class HeaderController extends Controller
             'button_title_ru' => $request->button_title_ru,
             'status' => $request->status,
             'section_id' => $request->section_id,
+            'styles' => $request->styles,
         ]);
         return redirect()->route('header.index')->with('success','Header create successfuly');
     }
@@ -94,6 +95,7 @@ class HeaderController extends Controller
             'button_title_ru' => $request->button_title_ru,
             'status' => $request->status,
             'section_id' => $request->section_id,
+            'styles' => $request->styles,
         ]);
         return redirect()->route('header.index')->with('success','Header update successfuly');
     }

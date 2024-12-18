@@ -3,11 +3,22 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $locale = session()->get('locale') ?? 'uz';
-    return redirect("/$locale");
+    $l = request()->getRequestUri();
+    if ($l == "/ru"){
+        session([
+            'locale' => "ru"
+        ]);
+    }
+    if ($l == "/uz"){
+        session([
+            'locale' => "uz"
+        ]);
+    }
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
 });
 
 Route::group(['prefix' => '{lang}', 'where' => ['lang' => 'uz|ru']], function () {
+
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
         ->name('welcome')
         ->middleware('setlocale');

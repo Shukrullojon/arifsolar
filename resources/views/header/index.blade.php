@@ -36,6 +36,7 @@
                                 <th>Button Title(uz)</th>
                                 <th>Button Title(ru)</th>
                                 <th>Section</th>
+                                <th>Style</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
@@ -48,6 +49,7 @@
                                     <td>{{ $header->button_title_uz }}</td>
                                     <td>{{ $header->button_title_ru }}</td>
                                     <td>{{ \App\Models\Header::$sections[$header->section_id] }}</td>
+                                    <td>{{ $header->styles }}</td>
                                     <td>{{ \App\Models\Header::$statuses[$header->status] }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">

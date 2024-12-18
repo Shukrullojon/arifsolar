@@ -32,6 +32,11 @@
                             </tr>
 
                             <tr>
+                                <th>Style</th>
+                                <td>{{ $header->styles }}</td>
+                            </tr>
+
+                            <tr>
                                 <th>Status</th>
                                 <td>{{ \App\Models\Header::$statuses[$header->status] }}</td>
                             </tr>
